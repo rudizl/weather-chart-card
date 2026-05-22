@@ -70,6 +70,7 @@ setConfig(config) {
   const cardConfig = {
     icons_size: 25,
     current_temp_size: 28,
+    tap_action: { action: 'more-info' },
     ...config,
     forecast: {
       labels_font_size: 11,
@@ -720,7 +721,7 @@ updateChart({ config, language, weather, forecastItems } = this) {
         }
       </style>
 
-      <ha-card header="${config.title}">
+      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: pointer;">
         <div class="card">
           ${this.renderMain()}
           ${this.renderAttributes()}
@@ -909,7 +910,7 @@ renderForecastConditionIcons({ config, forecastItems } = this) {
   }
 
   return html`
-    <div class="conditions" @click="${(e) => this.showMoreInfo(config.entity)}">
+    <div class="conditions">
       ${forecast.map((item) => html`
         <div class="forecast-item">
           ${config.icons ?
@@ -979,6 +980,25 @@ renderWind({ config, weather, windSpeed, windDirection, forecastItems } = this) 
     </div>
   `;
 }
+
+  _handleAction() {
+    const tapAction = this.config.tap_action || { action: 'more-info' };
+    switch (tapAction.action) {
+      case 'navigate':
+        history.pushState(null, '', tapAction.navigation_path);
+        window.dispatchEvent(new Event('location-changed'));
+        break;
+      case 'url':
+        window.open(tapAction.url_path, '_blank');
+        break;
+      case 'none':
+        break;
+      case 'more-info':
+      default:
+        this.showMoreInfo(this.config.entity);
+        break;
+    }
+  }
 
   _fire(type, detail, options) {
     const node = this.shadowRoot;

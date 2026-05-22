@@ -127,6 +127,7 @@ class ContentCardEditor extends LitElement {
           <button @click="${() => this.showPage('forecast')}">Forecast</button>
           <button @click="${() => this.showPage('units')}">Units</button>
           <button @click="${() => this.showPage('alternate')}">Alternate entities</button>
+          <button @click="${() => this.showPage('tap_action')}">Tap action</button>
         </div>
 
         <!-- Time settings -->
@@ -319,6 +320,51 @@ class ContentCardEditor extends LitElement {
             .value="${unitsConfig.speed || ''}"
             @value-changed="${(e) => this._valueChanged(e, 'units.speed')}"
           ></paper-input>
+        </div>
+
+        <!-- Tap Action Page -->
+        <div class="page-container ${this.currentPage === 'tap_action' ? 'active' : ''}">
+          <h4>Tap action</h4>
+          <div>
+            <label>
+              <input type="radio" name="tap_action" value="more-info"
+                ?checked="${(this._config.tap_action || {}).action === 'more-info' || !this._config.tap_action}"
+                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+              More info
+            </label><br>
+            <label>
+              <input type="radio" name="tap_action" value="navigate"
+                ?checked="${(this._config.tap_action || {}).action === 'navigate'}"
+                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+              Navigate
+            </label><br>
+            <label>
+              <input type="radio" name="tap_action" value="url"
+                ?checked="${(this._config.tap_action || {}).action === 'url'}"
+                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+              URL
+            </label><br>
+            <label>
+              <input type="radio" name="tap_action" value="none"
+                ?checked="${(this._config.tap_action || {}).action === 'none'}"
+                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+              None
+            </label>
+          </div>
+          ${(this._config.tap_action || {}).action === 'navigate' ? html`
+            <paper-input
+              label="Navigation path (e.g. /lovelace/weather)"
+              .value="${(this._config.tap_action || {}).navigation_path || ''}"
+              @value-changed="${(e) => this._valueChanged(e, 'tap_action.navigation_path')}"
+            ></paper-input>
+          ` : ''}
+          ${(this._config.tap_action || {}).action === 'url' ? html`
+            <paper-input
+              label="URL"
+              .value="${(this._config.tap_action || {}).url_path || ''}"
+              @value-changed="${(e) => this._valueChanged(e, 'tap_action.url_path')}"
+            ></paper-input>
+          ` : ''}
         </div>
 
         <!-- Alternate Page -->

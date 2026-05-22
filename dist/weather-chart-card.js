@@ -5,9 +5,11 @@ const locale = {
     'tempHi': 'Teplota',
     'tempLo': 'Teplota v noci',
     'precip': 'Srážky',
+    'feelsLike': 'Pocitová teplota',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -15,8 +17,8 @@ const locale = {
       'in': 'in'
     },
     'cardinalDirections': [
-      'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
-      'S', 'S-SW', 'SW', 'W-SW', 'W', 'W-NW', 'NW', 'N-NW', 'N'
+      'S', 'S-SV', 'SV', 'V-SV', 'V', 'V-JV', 'JV', 'J-JV',
+      'J', 'J-JZ', 'JZ', 'Z-JZ', 'Z', 'Z-SZ', 'SZ', 'S-SZ', 'S'
     ],
     'clear-night': 'Jasná noc',
     'cloudy': 'Zataženo',
@@ -33,13 +35,15 @@ const locale = {
     'windy': 'Větrno',
     'windy-variant': 'Větrno'
   },
-  de: {
-    'tempHi': 'Temperatur',
-    'tempLo': 'Nachttemperatur',
-    'precip': 'Niederschlag',
+  sk: {
+    'tempHi': 'Teplota',
+    'tempLo': 'Teplota v noci',
+    'precip': 'Zrážky',
+    'feelsLike': 'Pocitová teplota',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -47,7 +51,41 @@ const locale = {
       'in': 'in'
     },
     'cardinalDirections': [
-      'N', 'N-NO', 'NO', 'E-NO', 'O', 'O-SO', 'SO', 'S-SO',
+      'S', 'S-SV', 'SV', 'V-SV', 'V', 'V-JV', 'JV', 'J-JV',
+      'J', 'J-JZ', 'JZ', 'Z-JZ', 'Z', 'Z-SZ', 'SZ', 'S-SZ', 'S'
+    ],
+    'clear-night': 'Jasná noc',
+    'cloudy': 'Oblačno',
+    'fog': 'Hmla',
+    'hail': 'Krúpy',
+    'lightning': 'Búrky',
+    'lightning-rainy': 'Búrky, dážď',
+    'partlycloudy': 'Polojasno',
+    'pouring': 'Silný dážď',
+    'rainy': 'Dážď',
+    'snowy': 'Sneh',
+    'snowy-rainy': 'Sneh s dažďom',
+    'sunny': 'Jasno',
+    'windy': 'Veterno',
+    'windy-variant': 'Veterno'
+  },  
+  de: {
+    'tempHi': 'Temperatur',
+    'tempLo': 'Nachttemperatur',
+    'precip': 'Niederschlag',
+    'feelsLike': 'Gefühlt',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'N', 'N-NO', 'NO', 'O-NO', 'O', 'O-SO', 'SO', 'S-SO',
       'S', 'S-SW', 'SW', 'W-SW', 'W', 'W-NW', 'NW', 'N-NW', 'N'
     ],
     'clear-night': 'Sternenklar',
@@ -69,9 +107,11 @@ const locale = {
     'tempHi': 'Temperatuur',
     'tempLo': 'Nachttemperatuur',
     'precip': 'Neerslag',
+    'feelsLike': 'Voelt als',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -101,9 +141,11 @@ const locale = {
     'tempHi': 'Temperature',
     'tempLo': 'Temperature night',
     'precip': 'Precipitations',
+    'feelsLike': 'Feels like',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -133,9 +175,11 @@ const locale = {
     'tempHi': 'Temperatura máxima',
     'tempLo': 'Temperatura mínima',
     'precip': 'Precipitación',
+    'feelsLike': 'Sensación térmica',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -165,9 +209,11 @@ const locale = {
     'tempHi': 'Lämpötila ylin',
     'tempLo': 'Lämpötila alin',
     'precip': 'Sademäärä',
+    'feelsLike': 'Tuntuu kuin',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -197,9 +243,11 @@ const locale = {
     'tempHi': 'Max. hőmérséklet',
     'tempLo': 'Min. hőmérséklet',
     'precip': 'Csapadék',
+    'feelsLike': 'Hőérzet',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -229,9 +277,11 @@ const locale = {
     'tempHi': 'Температура',
     'tempLo': 'Температура ночью',
     'precip': 'Осадки',
+    'feelsLike': 'Ощущается как',
     'units': {
       'km/h': 'км/ч',
       'm/s': 'м/с',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'гПа',
       'mmHg': 'мм рт.ст.',
@@ -261,9 +311,11 @@ const locale = {
     'tempHi': 'Temperatur max',
     'tempLo': 'Temperatur min',
     'precip': 'Nederbörd',
+    'feelsLike': 'Känns som',
     'units': {
         'km/h': 'km/h',
         'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
         'hPa': 'hPa',
         'mmHg': 'mm Hg',
@@ -290,12 +342,14 @@ const locale = {
     'windy-variant': 'Blåsigt'
   },
   fr: {
-    'tempHi': 'Temperature max',
-    'tempLo': 'Temperature min',
+    'tempHi': 'Température max',
+    'tempLo': 'Température min',
     'precip': 'Précipitations',
+    'feelsLike': 'Ressenti',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -306,18 +360,18 @@ const locale = {
       'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
       'S', 'S-SO', 'SO', 'O-SO', 'O', 'O-NO', 'NO', 'N-NO', 'N'
     ],
-    'clear-night': 'Nuit dégagé',
+    'clear-night': 'Nuit dégagée',
     'cloudy': 'Nuageux',
     'fog': 'Brouillard',
-    'hail': 'Grèle',
-    'lightning': 'Tonnère',
-    'lightning-rainy': 'Orage',
-    'partlycloudy': 'Couvert partielle',
-    'pouring': 'Forte Pluie',
+    'hail': 'Grêle',
+    'lightning': 'Orage',
+    'lightning-rainy': 'Orage et Pluie',
+    'partlycloudy': 'Éclaircies',
+    'pouring': 'Fortes Pluies',
     'rainy': 'Pluie',
     'snowy': 'Neige',
     'snowy-rainy': 'Neige et Pluie',
-    'sunny': 'Ensoleillée',
+    'sunny': 'Ensoleillé',
     'windy': 'Venteux',
     'windy-variant': 'Venteux'
   },
@@ -325,9 +379,11 @@ const locale = {
     'tempHi': 'Temperatura',
     'tempLo': 'Temperatura w nocy',
     'precip': 'Opady',
+    'feelsLike': 'Odczuwalna',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -357,9 +413,11 @@ const locale = {
     'tempHi': 'Maksimumstemperatur',
     'tempLo': 'Minimumstemperatur',
     'precip': 'Nedbør',
+    'feelsLike': 'Føles som',
     'units': {
       'km/h': 'km/t',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -389,9 +447,11 @@ const locale = {
     'tempHi': 'Temperatur',
     'tempLo': 'Nattemperatur',
     'precip': 'Nedbør',
+    'feelsLike': 'Føles som',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -421,9 +481,11 @@ const locale = {
     'tempHi': 'Temperatura massima',
     'tempLo': 'Temperatura notte',
     'precip': 'Precipitazioni',
+    'feelsLike': 'Percepito come',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -453,9 +515,11 @@ const locale = {
     'tempHi': 'Temperatura máxima',
     'tempLo': 'Temperatura noite',
     'precip': 'Precipitação',
+    'feelsLike': 'Sensação Térmica',
     'units': {
       'km/h': 'km/h',
       'm/s': 'm/s',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'mm Hg',
@@ -466,12 +530,12 @@ const locale = {
       'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
       'S', 'S-SW', 'SW', 'W-SW', 'W', 'W-NW', 'NW', 'N-NW', 'N'
     ],
-    'clear-night': 'Céu limpo, noite',
+    'clear-night': 'Noite limpa',
     'cloudy': 'Nublado',
     'fog': 'Nevoeiro',
     'hail': 'Granizo',
-    'lightning': 'Trovão',
-    'lightning-rainy': 'Trovões, chuva',
+    'lightning': 'Relâmpago ',
+    'lightning-rainy': 'Chuva e relâmpagos',
     'partlycloudy': 'Parcialmente nublado',
     'pouring': 'Chuva forte',
     'rainy': 'Chuva',
@@ -485,9 +549,11 @@ const locale = {
     'tempHi': 'Μέγιστη θερμοκρασία',
     'tempLo': 'Ελάχιστη θερμοκρασία νύχτας',
     'precip': 'Υετός',
+    'feelsLike': 'Αίσθηση σαν',
     'units': {
       'km/h': 'χλμ/ώρα',
       'm/s': 'μ/δ',
+      'mph': 'mph',
       'Bft': 'Bft',
       'hPa': 'hPa',
       'mmHg': 'χιλ. υδράργυρου',
@@ -512,6 +578,210 @@ const locale = {
     'sunny': 'Ηλιόλουστο',
     'windy': 'Ανεμώδης',
     'windy-variant': 'Ανεμώδης'
+  },
+  bg: {
+    'tempHi': 'Максимална температура',
+    'tempLo': 'Минимална температура',
+    'precip': 'Валежи',
+    'feelsLike': 'Усеща се като',
+    'units': {
+      'km/h': 'км/ч',
+      'm/s': 'м/с',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mmHg',
+      'mm': 'мм',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'С', 'С-СИ', 'СИ', 'И-СИ', 'И', 'И-ЮИ', 'ЮИ', 'Ю-ЮИ',
+      'Ю', 'Ю-ЮЗ', 'ЮЗ', 'З-ЮЗ', 'З', 'З-СЗ', 'СЗ', 'С-СЗ', 'С'
+    ],
+    'clear-night': 'Ясно,нощ',
+    'cloudy': 'Облачно',
+    'fog': 'Мъгла',
+    'hail': 'Градушка',
+    'lightning': 'Гръмотевици',
+    'lightning-rainy': 'Гръмотевици с дъжд',
+    'partlycloudy': 'Разкъсана облачност',
+    'pouring': 'Обилни валежи',
+    'rainy': 'Дъжд',
+    'snowy': 'Сняг',
+    'snowy-rainy': 'Сняг с дъжд',
+    'sunny': 'Ясно',
+    'windy': 'Ветровито',
+    'windy-variant': 'Ветровито'
+  },
+  lt: {
+    'tempHi': 'Dieną',
+    'tempLo': 'Naktį',
+    'precip': 'Krituliai',
+    'feelsLike': 'Jaučiama',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'Š', 'Š-ŠR', 'ŠR', 'R-ŠR', 'R', 'R-PR', 'PR', 'P-PR',
+      'P', 'P-PV', 'PV', 'V-PV', 'V', 'V-ŠV', 'ŠV', 'Š-ŠV', 'Š'
+    ],
+    'clear-night': 'Giedra naktis',
+    'cloudy': 'Debesuota',
+    'fog': 'Rūkas',
+    'hail': 'Kruša',
+    'lightning': 'Perkūnija',
+    'lightning-rainy': 'Perkūnija, lietus',
+    'partlycloudy': 'Apsiniaukę',
+    'pouring': 'Liūtis',
+    'rainy': 'Lietus',
+    'snowy': 'Sniegas',
+    'snowy-rainy': 'Šlapdriba',
+    'sunny': 'Saulėta',
+    'windy': 'Vėjuota',
+    'windy-variant': 'Vėjuota'
+  },
+  ca: {
+    'tempHi': 'Temperatura màxima',
+    'tempLo': 'Temperatura mínima',
+    'precip': 'Precipitació',
+    'feelsLike': 'Sensació tèrmica',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
+      'S', 'S-SO', 'SO', 'O-SO', 'O', 'O-NO', 'NO', 'N-NO', 'N'
+    ],
+    'clear-night': 'Serè',
+    'cloudy': 'Ennuvolat',
+    'fog': 'Boira',
+    'hail': 'Calamarsa',
+    'lightning': 'Tempesta elèctrica',
+    'lightning-rainy': 'Tempesta',
+    'partlycloudy': 'Parcialment ennuvolat',
+    'pouring': 'Aiguat',
+    'rainy': 'Plujós',
+    'snowy': 'Neu',
+    'snowy-rainy': 'Aiguaneu',
+    'sunny': 'Assolellat',
+    'windy': 'Ventós',
+    'windy-variant': 'Ràfegues de vent'
+  },
+  ro: {
+    'tempHi': 'Temperatură',
+    'tempLo': 'Temperatură noaptea',
+    'precip': 'Precipitații',
+    'feelsLike': 'Se simte ca',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
+      'S', 'S-SV', 'SV', 'V-SV', 'V', 'V-NV', 'NV', 'N-NV', 'N'
+    ],
+    'clear-night': 'Cer senin, noapte',
+    'cloudy': 'Noros',
+    'fog': 'Ceață',
+    'hail': 'Grindină',
+    'lightning': 'Fulger',
+    'lightning-rainy': 'Fulger, ploios',
+    'partlycloudy': 'Parțial noros',
+    'pouring': 'Plouă torențial',
+    'rainy': 'Ploios',
+    'snowy': 'Ninge',
+    'snowy-rainy': 'Ninge, ploios',
+    'sunny': 'Însorit',
+    'windy': 'Vânt',
+    'windy-variant': 'Vânt'
+  },
+  uk: {
+    'tempHi': 'Температура',
+    'tempLo': 'Температура вночі',
+    'precip': 'Опади',
+    'feelsLike': 'Відчувається як',
+    'units': {
+      'km/h': 'км/год',
+      'm/s': 'м/с',
+      'mph': 'миль/год',
+      'Bft': 'Bft',
+      'hPa': 'гПа',
+      'mmHg': 'мм рт. ст.',
+      'mm': 'мм',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'Пн', 'Пн-ПнСх', 'ПнСх', 'Сх-ПнСх', 'Сх', 'Сх-ПдСх', 'ПдСх', 'Пд-ПдСх',
+      'Пд', 'Пд-ПдЗх', 'ПдЗх', 'Зх-ПдЗх', 'Зх', 'Зх-ПнЗх', 'ПнЗх', 'Пн-ПнЗх', 'Пн'
+    ],
+    'clear-night': 'Ясно, ніч',
+    'cloudy': 'Хмарно',
+    'fog': 'Туман',
+    'hail': 'Град',
+    'lightning': 'Гроза',
+    'lightning-rainy': 'Гроза з дощем',
+    'partlycloudy': 'Мінлива хмарність',
+    'pouring': 'Злива',
+    'rainy': 'Дощ',
+    'snowy': 'Сніг',
+    'snowy-rainy': 'Мокрий сніг',
+    'sunny': 'Сонячно',
+    'windy': 'Вітряно',
+    'windy-variant': 'Вітряно'
+  },
+  ko: {
+    'tempHi': '최고 기온',
+    'tempLo': '최저 기온',
+    'precip': '강수',
+    'feelsLike': '체감',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'mph': 'mph',
+      'Bft': 'Bft',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      '북', '북북동', '북동', '동북동', '동', '동남동', '남동', '남남동',
+      '남', '남남서', '남서', '서남서', '서', '서북서', '북서', '북북서', '북'
+    ],
+    'clear-night': '맑음(밤)',
+    'cloudy': '흐림',
+    'fog': '안개',
+    'hail': '우박',
+    'lightning': '번개',
+    'lightning-rainy': '번개, 뇌우',
+    'partlycloudy': '조금 흐림',
+    'pouring': '폭우',
+    'rainy': '비',
+    'snowy': '눈',
+    'snowy-rainy': '진눈깨비',
+    'sunny': '맑음',
+    'windy': '바람',
+    'windy-variant': '강풍'
   },
 };
 
@@ -565,51 +835,135 @@ const weatherIconsNight = {
 
 const WeatherEntityFeature = {
   FORECAST_DAILY: 1,
-  FORECAST_HOURLY: 2,
-  FORECAST_TWICE_DAILY: 4,
-};
+  FORECAST_HOURLY: 2};
 
 /**
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const t$1=window,e$2=t$1.ShadowRoot&&(void 0===t$1.ShadyCSS||t$1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,s$3=Symbol(),n$4=new WeakMap;let o$3 = class o{constructor(t,e,n){if(this._$cssResult$=!0,n!==s$3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e;}get styleSheet(){let t=this.o;const s=this.t;if(e$2&&void 0===t){const e=void 0!==s&&1===s.length;e&&(t=n$4.get(s)),void 0===t&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),e&&n$4.set(s,t));}return t}toString(){return this.cssText}};const r$2=t=>new o$3("string"==typeof t?t:t+"",void 0,s$3),S$1=(s,n)=>{e$2?s.adoptedStyleSheets=n.map((t=>t instanceof CSSStyleSheet?t:t.styleSheet)):n.forEach((e=>{const n=document.createElement("style"),o=t$1.litNonce;void 0!==o&&n.setAttribute("nonce",o),n.textContent=e.cssText,s.appendChild(n);}));},c$1=e$2?t=>t:t=>t instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return r$2(e)})(t):t;
+const t$1=window,e$2=t$1.ShadowRoot&&(void 0===t$1.ShadyCSS||t$1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,s$3=Symbol(),n$4=new WeakMap;let o$3 = class o{constructor(t,e,n){if(this._$cssResult$=true,n!==s$3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e;}get styleSheet(){let t=this.o;const s=this.t;if(e$2&&void 0===t){const e=void 0!==s&&1===s.length;e&&(t=n$4.get(s)),void 0===t&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),e&&n$4.set(s,t));}return t}toString(){return this.cssText}};const r$2=t=>new o$3("string"==typeof t?t:t+"",void 0,s$3),S$1=(s,n)=>{e$2?s.adoptedStyleSheets=n.map((t=>t instanceof CSSStyleSheet?t:t.styleSheet)):n.forEach((e=>{const n=document.createElement("style"),o=t$1.litNonce;void 0!==o&&n.setAttribute("nonce",o),n.textContent=e.cssText,s.appendChild(n);}));},c$1=e$2?t=>t:t=>t instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return r$2(e)})(t):t;
 
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */var s$2;const e$1=window,r$1=e$1.trustedTypes,h$1=r$1?r$1.emptyScript:"",o$2=e$1.reactiveElementPolyfillSupport,n$3={toAttribute(t,i){switch(i){case Boolean:t=t?h$1:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t);}return t},fromAttribute(t,i){let s=t;switch(i){case Boolean:s=null!==t;break;case Number:s=null===t?null:Number(t);break;case Object:case Array:try{s=JSON.parse(t);}catch(t){s=null;}}return s}},a$1=(t,i)=>i!==t&&(i==i||t==t),l$2={attribute:!0,type:String,converter:n$3,reflect:!1,hasChanged:a$1},d$1="finalized";let u$1 = class u extends HTMLElement{constructor(){super(),this._$Ei=new Map,this.isUpdatePending=!1,this.hasUpdated=!1,this._$El=null,this._$Eu();}static addInitializer(t){var i;this.finalize(),(null!==(i=this.h)&&void 0!==i?i:this.h=[]).push(t);}static get observedAttributes(){this.finalize();const t=[];return this.elementProperties.forEach(((i,s)=>{const e=this._$Ep(s,i);void 0!==e&&(this._$Ev.set(e,s),t.push(e));})),t}static createProperty(t,i=l$2){if(i.state&&(i.attribute=!1),this.finalize(),this.elementProperties.set(t,i),!i.noAccessor&&!this.prototype.hasOwnProperty(t)){const s="symbol"==typeof t?Symbol():"__"+t,e=this.getPropertyDescriptor(t,s,i);void 0!==e&&Object.defineProperty(this.prototype,t,e);}}static getPropertyDescriptor(t,i,s){return {get(){return this[i]},set(e){const r=this[t];this[i]=e,this.requestUpdate(t,r,s);},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)||l$2}static finalize(){if(this.hasOwnProperty(d$1))return !1;this[d$1]=!0;const t=Object.getPrototypeOf(this);if(t.finalize(),void 0!==t.h&&(this.h=[...t.h]),this.elementProperties=new Map(t.elementProperties),this._$Ev=new Map,this.hasOwnProperty("properties")){const t=this.properties,i=[...Object.getOwnPropertyNames(t),...Object.getOwnPropertySymbols(t)];for(const s of i)this.createProperty(s,t[s]);}return this.elementStyles=this.finalizeStyles(this.styles),!0}static finalizeStyles(i){const s=[];if(Array.isArray(i)){const e=new Set(i.flat(1/0).reverse());for(const i of e)s.unshift(c$1(i));}else void 0!==i&&s.push(c$1(i));return s}static _$Ep(t,i){const s=i.attribute;return !1===s?void 0:"string"==typeof s?s:"string"==typeof t?t.toLowerCase():void 0}_$Eu(){var t;this._$E_=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$Eg(),this.requestUpdate(),null===(t=this.constructor.h)||void 0===t||t.forEach((t=>t(this)));}addController(t){var i,s;(null!==(i=this._$ES)&&void 0!==i?i:this._$ES=[]).push(t),void 0!==this.renderRoot&&this.isConnected&&(null===(s=t.hostConnected)||void 0===s||s.call(t));}removeController(t){var i;null===(i=this._$ES)||void 0===i||i.splice(this._$ES.indexOf(t)>>>0,1);}_$Eg(){this.constructor.elementProperties.forEach(((t,i)=>{this.hasOwnProperty(i)&&(this._$Ei.set(i,this[i]),delete this[i]);}));}createRenderRoot(){var t;const s=null!==(t=this.shadowRoot)&&void 0!==t?t:this.attachShadow(this.constructor.shadowRootOptions);return S$1(s,this.constructor.elementStyles),s}connectedCallback(){var t;void 0===this.renderRoot&&(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostConnected)||void 0===i?void 0:i.call(t)}));}enableUpdating(t){}disconnectedCallback(){var t;null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostDisconnected)||void 0===i?void 0:i.call(t)}));}attributeChangedCallback(t,i,s){this._$AK(t,s);}_$EO(t,i,s=l$2){var e;const r=this.constructor._$Ep(t,s);if(void 0!==r&&!0===s.reflect){const h=(void 0!==(null===(e=s.converter)||void 0===e?void 0:e.toAttribute)?s.converter:n$3).toAttribute(i,s.type);this._$El=t,null==h?this.removeAttribute(r):this.setAttribute(r,h),this._$El=null;}}_$AK(t,i){var s;const e=this.constructor,r=e._$Ev.get(t);if(void 0!==r&&this._$El!==r){const t=e.getPropertyOptions(r),h="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==(null===(s=t.converter)||void 0===s?void 0:s.fromAttribute)?t.converter:n$3;this._$El=r,this[r]=h.fromAttribute(i,t.type),this._$El=null;}}requestUpdate(t,i,s){let e=!0;void 0!==t&&(((s=s||this.constructor.getPropertyOptions(t)).hasChanged||a$1)(this[t],i)?(this._$AL.has(t)||this._$AL.set(t,i),!0===s.reflect&&this._$El!==t&&(void 0===this._$EC&&(this._$EC=new Map),this._$EC.set(t,s))):e=!1),!this.isUpdatePending&&e&&(this._$E_=this._$Ej());}async _$Ej(){this.isUpdatePending=!0;try{await this._$E_;}catch(t){Promise.reject(t);}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;this.hasUpdated,this._$Ei&&(this._$Ei.forEach(((t,i)=>this[i]=t)),this._$Ei=void 0);let i=!1;const s=this._$AL;try{i=this.shouldUpdate(s),i?(this.willUpdate(s),null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostUpdate)||void 0===i?void 0:i.call(t)})),this.update(s)):this._$Ek();}catch(t){throw i=!1,this._$Ek(),t}i&&this._$AE(s);}willUpdate(t){}_$AE(t){var i;null===(i=this._$ES)||void 0===i||i.forEach((t=>{var i;return null===(i=t.hostUpdated)||void 0===i?void 0:i.call(t)})),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t);}_$Ek(){this._$AL=new Map,this.isUpdatePending=!1;}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$E_}shouldUpdate(t){return !0}update(t){void 0!==this._$EC&&(this._$EC.forEach(((t,i)=>this._$EO(i,this[i],t))),this._$EC=void 0),this._$Ek();}updated(t){}firstUpdated(t){}};u$1[d$1]=!0,u$1.elementProperties=new Map,u$1.elementStyles=[],u$1.shadowRootOptions={mode:"open"},null==o$2||o$2({ReactiveElement:u$1}),(null!==(s$2=e$1.reactiveElementVersions)&&void 0!==s$2?s$2:e$1.reactiveElementVersions=[]).push("1.6.3");
+ */var s$2;const e$1=window,r$1=e$1.trustedTypes,h$1=r$1?r$1.emptyScript:"",o$2=e$1.reactiveElementPolyfillSupport,n$3={toAttribute(t,i){switch(i){case Boolean:t=t?h$1:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t);}return t},fromAttribute(t,i){let s=t;switch(i){case Boolean:s=null!==t;break;case Number:s=null===t?null:Number(t);break;case Object:case Array:try{s=JSON.parse(t);}catch(t){s=null;}}return s}},a$1=(t,i)=>i!==t&&(i==i||t==t),l$2={attribute:true,type:String,converter:n$3,reflect:false,hasChanged:a$1},d$1="finalized";let u$1 = class u extends HTMLElement{constructor(){super(),this._$Ei=new Map,this.isUpdatePending=false,this.hasUpdated=false,this._$El=null,this._$Eu();}static addInitializer(t){var i;this.finalize(),(null!==(i=this.h)&&void 0!==i?i:this.h=[]).push(t);}static get observedAttributes(){this.finalize();const t=[];return this.elementProperties.forEach(((i,s)=>{const e=this._$Ep(s,i);void 0!==e&&(this._$Ev.set(e,s),t.push(e));})),t}static createProperty(t,i=l$2){if(i.state&&(i.attribute=false),this.finalize(),this.elementProperties.set(t,i),!i.noAccessor&&!this.prototype.hasOwnProperty(t)){const s="symbol"==typeof t?Symbol():"__"+t,e=this.getPropertyDescriptor(t,s,i);void 0!==e&&Object.defineProperty(this.prototype,t,e);}}static getPropertyDescriptor(t,i,s){return {get(){return this[i]},set(e){const r=this[t];this[i]=e,this.requestUpdate(t,r,s);},configurable:true,enumerable:true}}static getPropertyOptions(t){return this.elementProperties.get(t)||l$2}static finalize(){if(this.hasOwnProperty(d$1))return  false;this[d$1]=true;const t=Object.getPrototypeOf(this);if(t.finalize(),void 0!==t.h&&(this.h=[...t.h]),this.elementProperties=new Map(t.elementProperties),this._$Ev=new Map,this.hasOwnProperty("properties")){const t=this.properties,i=[...Object.getOwnPropertyNames(t),...Object.getOwnPropertySymbols(t)];for(const s of i)this.createProperty(s,t[s]);}return this.elementStyles=this.finalizeStyles(this.styles),true}static finalizeStyles(i){const s=[];if(Array.isArray(i)){const e=new Set(i.flat(1/0).reverse());for(const i of e)s.unshift(c$1(i));}else void 0!==i&&s.push(c$1(i));return s}static _$Ep(t,i){const s=i.attribute;return  false===s?void 0:"string"==typeof s?s:"string"==typeof t?t.toLowerCase():void 0}_$Eu(){var t;this._$E_=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$Eg(),this.requestUpdate(),null===(t=this.constructor.h)||void 0===t||t.forEach((t=>t(this)));}addController(t){var i,s;(null!==(i=this._$ES)&&void 0!==i?i:this._$ES=[]).push(t),void 0!==this.renderRoot&&this.isConnected&&(null===(s=t.hostConnected)||void 0===s||s.call(t));}removeController(t){var i;null===(i=this._$ES)||void 0===i||i.splice(this._$ES.indexOf(t)>>>0,1);}_$Eg(){this.constructor.elementProperties.forEach(((t,i)=>{this.hasOwnProperty(i)&&(this._$Ei.set(i,this[i]),delete this[i]);}));}createRenderRoot(){var t;const s=null!==(t=this.shadowRoot)&&void 0!==t?t:this.attachShadow(this.constructor.shadowRootOptions);return S$1(s,this.constructor.elementStyles),s}connectedCallback(){var t;void 0===this.renderRoot&&(this.renderRoot=this.createRenderRoot()),this.enableUpdating(true),null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostConnected)||void 0===i?void 0:i.call(t)}));}enableUpdating(t){}disconnectedCallback(){var t;null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostDisconnected)||void 0===i?void 0:i.call(t)}));}attributeChangedCallback(t,i,s){this._$AK(t,s);}_$EO(t,i,s=l$2){var e;const r=this.constructor._$Ep(t,s);if(void 0!==r&&true===s.reflect){const h=(void 0!==(null===(e=s.converter)||void 0===e?void 0:e.toAttribute)?s.converter:n$3).toAttribute(i,s.type);this._$El=t,null==h?this.removeAttribute(r):this.setAttribute(r,h),this._$El=null;}}_$AK(t,i){var s;const e=this.constructor,r=e._$Ev.get(t);if(void 0!==r&&this._$El!==r){const t=e.getPropertyOptions(r),h="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==(null===(s=t.converter)||void 0===s?void 0:s.fromAttribute)?t.converter:n$3;this._$El=r,this[r]=h.fromAttribute(i,t.type),this._$El=null;}}requestUpdate(t,i,s){let e=true;void 0!==t&&(((s=s||this.constructor.getPropertyOptions(t)).hasChanged||a$1)(this[t],i)?(this._$AL.has(t)||this._$AL.set(t,i),true===s.reflect&&this._$El!==t&&(void 0===this._$EC&&(this._$EC=new Map),this._$EC.set(t,s))):e=false),!this.isUpdatePending&&e&&(this._$E_=this._$Ej());}async _$Ej(){this.isUpdatePending=true;try{await this._$E_;}catch(t){Promise.reject(t);}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;this.hasUpdated,this._$Ei&&(this._$Ei.forEach(((t,i)=>this[i]=t)),this._$Ei=void 0);let i=false;const s=this._$AL;try{i=this.shouldUpdate(s),i?(this.willUpdate(s),null===(t=this._$ES)||void 0===t||t.forEach((t=>{var i;return null===(i=t.hostUpdate)||void 0===i?void 0:i.call(t)})),this.update(s)):this._$Ek();}catch(t){throw i=false,this._$Ek(),t}i&&this._$AE(s);}willUpdate(t){}_$AE(t){var i;null===(i=this._$ES)||void 0===i||i.forEach((t=>{var i;return null===(i=t.hostUpdated)||void 0===i?void 0:i.call(t)})),this.hasUpdated||(this.hasUpdated=true,this.firstUpdated(t)),this.updated(t);}_$Ek(){this._$AL=new Map,this.isUpdatePending=false;}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$E_}shouldUpdate(t){return  true}update(t){ void 0!==this._$EC&&(this._$EC.forEach(((t,i)=>this._$EO(i,this[i],t))),this._$EC=void 0),this._$Ek();}updated(t){}firstUpdated(t){}};u$1[d$1]=true,u$1.elementProperties=new Map,u$1.elementStyles=[],u$1.shadowRootOptions={mode:"open"},null==o$2||o$2({ReactiveElement:u$1}),(null!==(s$2=e$1.reactiveElementVersions)&&void 0!==s$2?s$2:e$1.reactiveElementVersions=[]).push("1.6.3");
 
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-var t;const i=window,s$1=i.trustedTypes,e=s$1?s$1.createPolicy("lit-html",{createHTML:t=>t}):void 0,o$1="$lit$",n$2=`lit$${(Math.random()+"").slice(9)}$`,l$1="?"+n$2,h=`<${l$1}>`,r=document,u=()=>r.createComment(""),d=t=>null===t||"object"!=typeof t&&"function"!=typeof t,c=Array.isArray,v=t=>c(t)||"function"==typeof(null==t?void 0:t[Symbol.iterator]),a="[ \t\n\f\r]",f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,_=/-->/g,m=/>/g,p=RegExp(`>|${a}(?:([^\\s"'>=/]+)(${a}*=${a}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),g=/'/g,$=/"/g,y=/^(?:script|style|textarea|title)$/i,w=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=w(1),T=Symbol.for("lit-noChange"),A=Symbol.for("lit-nothing"),E=new WeakMap,C=r.createTreeWalker(r,129,null,!1);function P(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==e?e.createHTML(i):i}const V=(t,i)=>{const s=t.length-1,e=[];let l,r=2===i?"<svg>":"",u=f;for(let i=0;i<s;i++){const s=t[i];let d,c,v=-1,a=0;for(;a<s.length&&(u.lastIndex=a,c=u.exec(s),null!==c);)a=u.lastIndex,u===f?"!--"===c[1]?u=_:void 0!==c[1]?u=m:void 0!==c[2]?(y.test(c[2])&&(l=RegExp("</"+c[2],"g")),u=p):void 0!==c[3]&&(u=p):u===p?">"===c[0]?(u=null!=l?l:f,v=-1):void 0===c[1]?v=-2:(v=u.lastIndex-c[2].length,d=c[1],u=void 0===c[3]?p:'"'===c[3]?$:g):u===$||u===g?u=p:u===_||u===m?u=f:(u=p,l=void 0);const w=u===p&&t[i+1].startsWith("/>")?" ":"";r+=u===f?s+h:v>=0?(e.push(d),s.slice(0,v)+o$1+s.slice(v)+n$2+w):s+n$2+(-2===v?(e.push(void 0),i):w);}return [P(t,r+(t[s]||"<?>")+(2===i?"</svg>":"")),e]};class N{constructor({strings:t,_$litType$:i},e){let h;this.parts=[];let r=0,d=0;const c=t.length-1,v=this.parts,[a,f]=V(t,i);if(this.el=N.createElement(a,e),C.currentNode=this.el.content,2===i){const t=this.el.content,i=t.firstChild;i.remove(),t.append(...i.childNodes);}for(;null!==(h=C.nextNode())&&v.length<c;){if(1===h.nodeType){if(h.hasAttributes()){const t=[];for(const i of h.getAttributeNames())if(i.endsWith(o$1)||i.startsWith(n$2)){const s=f[d++];if(t.push(i),void 0!==s){const t=h.getAttribute(s.toLowerCase()+o$1).split(n$2),i=/([.?@])?(.*)/.exec(s);v.push({type:1,index:r,name:i[2],strings:t,ctor:"."===i[1]?H:"?"===i[1]?L:"@"===i[1]?z:k});}else v.push({type:6,index:r});}for(const i of t)h.removeAttribute(i);}if(y.test(h.tagName)){const t=h.textContent.split(n$2),i=t.length-1;if(i>0){h.textContent=s$1?s$1.emptyScript:"";for(let s=0;s<i;s++)h.append(t[s],u()),C.nextNode(),v.push({type:2,index:++r});h.append(t[i],u());}}}else if(8===h.nodeType)if(h.data===l$1)v.push({type:2,index:r});else {let t=-1;for(;-1!==(t=h.data.indexOf(n$2,t+1));)v.push({type:7,index:r}),t+=n$2.length-1;}r++;}}static createElement(t,i){const s=r.createElement("template");return s.innerHTML=t,s}}function S(t,i,s=t,e){var o,n,l,h;if(i===T)return i;let r=void 0!==e?null===(o=s._$Co)||void 0===o?void 0:o[e]:s._$Cl;const u=d(i)?void 0:i._$litDirective$;return (null==r?void 0:r.constructor)!==u&&(null===(n=null==r?void 0:r._$AO)||void 0===n||n.call(r,!1),void 0===u?r=void 0:(r=new u(t),r._$AT(t,s,e)),void 0!==e?(null!==(l=(h=s)._$Co)&&void 0!==l?l:h._$Co=[])[e]=r:s._$Cl=r),void 0!==r&&(i=S(t,r._$AS(t,i.values),r,e)),i}class M{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i;}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){var i;const{el:{content:s},parts:e}=this._$AD,o=(null!==(i=null==t?void 0:t.creationScope)&&void 0!==i?i:r).importNode(s,!0);C.currentNode=o;let n=C.nextNode(),l=0,h=0,u=e[0];for(;void 0!==u;){if(l===u.index){let i;2===u.type?i=new R(n,n.nextSibling,this,t):1===u.type?i=new u.ctor(n,u.name,u.strings,this,t):6===u.type&&(i=new Z(n,this,t)),this._$AV.push(i),u=e[++h];}l!==(null==u?void 0:u.index)&&(n=C.nextNode(),l++);}return C.currentNode=r,o}v(t){let i=0;for(const s of this._$AV)void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++;}}class R{constructor(t,i,s,e){var o;this.type=2,this._$AH=A,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cp=null===(o=null==e?void 0:e.isConnected)||void 0===o||o;}get _$AU(){var t,i;return null!==(i=null===(t=this._$AM)||void 0===t?void 0:t._$AU)&&void 0!==i?i:this._$Cp}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===(null==t?void 0:t.nodeType)&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=S(this,t,i),d(t)?t===A||null==t||""===t?(this._$AH!==A&&this._$AR(),this._$AH=A):t!==this._$AH&&t!==T&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):v(t)?this.T(t):this._(t);}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t));}_(t){this._$AH!==A&&d(this._$AH)?this._$AA.nextSibling.data=t:this.$(r.createTextNode(t)),this._$AH=t;}g(t){var i;const{values:s,_$litType$:e}=t,o="number"==typeof e?this._$AC(t):(void 0===e.el&&(e.el=N.createElement(P(e.h,e.h[0]),this.options)),e);if((null===(i=this._$AH)||void 0===i?void 0:i._$AD)===o)this._$AH.v(s);else {const t=new M(o,this),i=t.u(this.options);t.v(s),this.$(i),this._$AH=t;}}_$AC(t){let i=E.get(t.strings);return void 0===i&&E.set(t.strings,i=new N(t)),i}T(t){c(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const o of t)e===i.length?i.push(s=new R(this.k(u()),this.k(u()),this,this.options)):s=i[e],s._$AI(o),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e);}_$AR(t=this._$AA.nextSibling,i){var s;for(null===(s=this._$AP)||void 0===s||s.call(this,!1,!0,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i;}}setConnected(t){var i;void 0===this._$AM&&(this._$Cp=t,null===(i=this._$AP)||void 0===i||i.call(this,t));}}class k{constructor(t,i,s,e,o){this.type=1,this._$AH=A,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=o,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=A;}get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}_$AI(t,i=this,s,e){const o=this.strings;let n=!1;if(void 0===o)t=S(this,t,i,0),n=!d(t)||t!==this._$AH&&t!==T,n&&(this._$AH=t);else {const e=t;let l,h;for(t=o[0],l=0;l<o.length-1;l++)h=S(this,e[s+l],i,l),h===T&&(h=this._$AH[l]),n||(n=!d(h)||h!==this._$AH[l]),h===A?t=A:t!==A&&(t+=(null!=h?h:"")+o[l+1]),this._$AH[l]=h;}n&&!e&&this.j(t);}j(t){t===A?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,null!=t?t:"");}}class H extends k{constructor(){super(...arguments),this.type=3;}j(t){this.element[this.name]=t===A?void 0:t;}}const I=s$1?s$1.emptyScript:"";class L extends k{constructor(){super(...arguments),this.type=4;}j(t){t&&t!==A?this.element.setAttribute(this.name,I):this.element.removeAttribute(this.name);}}class z extends k{constructor(t,i,s,e,o){super(t,i,s,e,o),this.type=5;}_$AI(t,i=this){var s;if((t=null!==(s=S(this,t,i,0))&&void 0!==s?s:A)===T)return;const e=this._$AH,o=t===A&&e!==A||t.capture!==e.capture||t.once!==e.once||t.passive!==e.passive,n=t!==A&&(e===A||o);o&&this.element.removeEventListener(this.name,this,e),n&&this.element.addEventListener(this.name,this,t),this._$AH=t;}handleEvent(t){var i,s;"function"==typeof this._$AH?this._$AH.call(null!==(s=null===(i=this.options)||void 0===i?void 0:i.host)&&void 0!==s?s:this.element,t):this._$AH.handleEvent(t);}}class Z{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s;}get _$AU(){return this._$AM._$AU}_$AI(t){S(this,t);}}const B=i.litHtmlPolyfillSupport;null==B||B(N,R),(null!==(t=i.litHtmlVersions)&&void 0!==t?t:i.litHtmlVersions=[]).push("2.8.0");const D=(t,i,s)=>{var e,o;const n=null!==(e=null==s?void 0:s.renderBefore)&&void 0!==e?e:i;let l=n._$litPart$;if(void 0===l){const t=null!==(o=null==s?void 0:s.renderBefore)&&void 0!==o?o:null;n._$litPart$=l=new R(i.insertBefore(u(),t),t,void 0,null!=s?s:{});}return l._$AI(t),l};
+var t;const i=window,s$1=i.trustedTypes,e=s$1?s$1.createPolicy("lit-html",{createHTML:t=>t}):void 0,o$1="$lit$",n$2=`lit$${(Math.random()+"").slice(9)}$`,l$1="?"+n$2,h=`<${l$1}>`,r=document,u=()=>r.createComment(""),d=t=>null===t||"object"!=typeof t&&"function"!=typeof t,c=Array.isArray,v=t=>c(t)||"function"==typeof(null==t?void 0:t[Symbol.iterator]),a="[ \t\n\f\r]",f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,_=/-->/g,m=/>/g,p=RegExp(`>|${a}(?:([^\\s"'>=/]+)(${a}*=${a}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),g=/'/g,$=/"/g,y=/^(?:script|style|textarea|title)$/i,w=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=w(1),T=Symbol.for("lit-noChange"),A=Symbol.for("lit-nothing"),E=new WeakMap,C=r.createTreeWalker(r,129,null,false);function P(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==e?e.createHTML(i):i}const V=(t,i)=>{const s=t.length-1,e=[];let l,r=2===i?"<svg>":"",u=f;for(let i=0;i<s;i++){const s=t[i];let d,c,v=-1,a=0;for(;a<s.length&&(u.lastIndex=a,c=u.exec(s),null!==c);)a=u.lastIndex,u===f?"!--"===c[1]?u=_:void 0!==c[1]?u=m:void 0!==c[2]?(y.test(c[2])&&(l=RegExp("</"+c[2],"g")),u=p):void 0!==c[3]&&(u=p):u===p?">"===c[0]?(u=null!=l?l:f,v=-1):void 0===c[1]?v=-2:(v=u.lastIndex-c[2].length,d=c[1],u=void 0===c[3]?p:'"'===c[3]?$:g):u===$||u===g?u=p:u===_||u===m?u=f:(u=p,l=void 0);const w=u===p&&t[i+1].startsWith("/>")?" ":"";r+=u===f?s+h:v>=0?(e.push(d),s.slice(0,v)+o$1+s.slice(v)+n$2+w):s+n$2+(-2===v?(e.push(void 0),i):w);}return [P(t,r+(t[s]||"<?>")+(2===i?"</svg>":"")),e]};class N{constructor({strings:t,_$litType$:i},e){let h;this.parts=[];let r=0,d=0;const c=t.length-1,v=this.parts,[a,f]=V(t,i);if(this.el=N.createElement(a,e),C.currentNode=this.el.content,2===i){const t=this.el.content,i=t.firstChild;i.remove(),t.append(...i.childNodes);}for(;null!==(h=C.nextNode())&&v.length<c;){if(1===h.nodeType){if(h.hasAttributes()){const t=[];for(const i of h.getAttributeNames())if(i.endsWith(o$1)||i.startsWith(n$2)){const s=f[d++];if(t.push(i),void 0!==s){const t=h.getAttribute(s.toLowerCase()+o$1).split(n$2),i=/([.?@])?(.*)/.exec(s);v.push({type:1,index:r,name:i[2],strings:t,ctor:"."===i[1]?H:"?"===i[1]?L:"@"===i[1]?z:k});}else v.push({type:6,index:r});}for(const i of t)h.removeAttribute(i);}if(y.test(h.tagName)){const t=h.textContent.split(n$2),i=t.length-1;if(i>0){h.textContent=s$1?s$1.emptyScript:"";for(let s=0;s<i;s++)h.append(t[s],u()),C.nextNode(),v.push({type:2,index:++r});h.append(t[i],u());}}}else if(8===h.nodeType)if(h.data===l$1)v.push({type:2,index:r});else {let t=-1;for(;-1!==(t=h.data.indexOf(n$2,t+1));)v.push({type:7,index:r}),t+=n$2.length-1;}r++;}}static createElement(t,i){const s=r.createElement("template");return s.innerHTML=t,s}}function S(t,i,s=t,e){var o,n,l,h;if(i===T)return i;let r=void 0!==e?null===(o=s._$Co)||void 0===o?void 0:o[e]:s._$Cl;const u=d(i)?void 0:i._$litDirective$;return (null==r?void 0:r.constructor)!==u&&(null===(n=null==r?void 0:r._$AO)||void 0===n||n.call(r,false),void 0===u?r=void 0:(r=new u(t),r._$AT(t,s,e)),void 0!==e?(null!==(l=(h=s)._$Co)&&void 0!==l?l:h._$Co=[])[e]=r:s._$Cl=r),void 0!==r&&(i=S(t,r._$AS(t,i.values),r,e)),i}class M{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i;}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){var i;const{el:{content:s},parts:e}=this._$AD,o=(null!==(i=null==t?void 0:t.creationScope)&&void 0!==i?i:r).importNode(s,true);C.currentNode=o;let n=C.nextNode(),l=0,h=0,u=e[0];for(;void 0!==u;){if(l===u.index){let i;2===u.type?i=new R(n,n.nextSibling,this,t):1===u.type?i=new u.ctor(n,u.name,u.strings,this,t):6===u.type&&(i=new Z(n,this,t)),this._$AV.push(i),u=e[++h];}l!==(null==u?void 0:u.index)&&(n=C.nextNode(),l++);}return C.currentNode=r,o}v(t){let i=0;for(const s of this._$AV) void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++;}}class R{constructor(t,i,s,e){var o;this.type=2,this._$AH=A,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cp=null===(o=null==e?void 0:e.isConnected)||void 0===o||o;}get _$AU(){var t,i;return null!==(i=null===(t=this._$AM)||void 0===t?void 0:t._$AU)&&void 0!==i?i:this._$Cp}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===(null==t?void 0:t.nodeType)&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=S(this,t,i),d(t)?t===A||null==t||""===t?(this._$AH!==A&&this._$AR(),this._$AH=A):t!==this._$AH&&t!==T&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):v(t)?this.T(t):this._(t);}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t));}_(t){this._$AH!==A&&d(this._$AH)?this._$AA.nextSibling.data=t:this.$(r.createTextNode(t)),this._$AH=t;}g(t){var i;const{values:s,_$litType$:e}=t,o="number"==typeof e?this._$AC(t):(void 0===e.el&&(e.el=N.createElement(P(e.h,e.h[0]),this.options)),e);if((null===(i=this._$AH)||void 0===i?void 0:i._$AD)===o)this._$AH.v(s);else {const t=new M(o,this),i=t.u(this.options);t.v(s),this.$(i),this._$AH=t;}}_$AC(t){let i=E.get(t.strings);return void 0===i&&E.set(t.strings,i=new N(t)),i}T(t){c(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const o of t)e===i.length?i.push(s=new R(this.k(u()),this.k(u()),this,this.options)):s=i[e],s._$AI(o),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e);}_$AR(t=this._$AA.nextSibling,i){var s;for(null===(s=this._$AP)||void 0===s||s.call(this,false,true,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i;}}setConnected(t){var i;void 0===this._$AM&&(this._$Cp=t,null===(i=this._$AP)||void 0===i||i.call(this,t));}}class k{constructor(t,i,s,e,o){this.type=1,this._$AH=A,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=o,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=A;}get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}_$AI(t,i=this,s,e){const o=this.strings;let n=false;if(void 0===o)t=S(this,t,i,0),n=!d(t)||t!==this._$AH&&t!==T,n&&(this._$AH=t);else {const e=t;let l,h;for(t=o[0],l=0;l<o.length-1;l++)h=S(this,e[s+l],i,l),h===T&&(h=this._$AH[l]),n||(n=!d(h)||h!==this._$AH[l]),h===A?t=A:t!==A&&(t+=(null!=h?h:"")+o[l+1]),this._$AH[l]=h;}n&&!e&&this.j(t);}j(t){t===A?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,null!=t?t:"");}}class H extends k{constructor(){super(...arguments),this.type=3;}j(t){this.element[this.name]=t===A?void 0:t;}}const I=s$1?s$1.emptyScript:"";class L extends k{constructor(){super(...arguments),this.type=4;}j(t){t&&t!==A?this.element.setAttribute(this.name,I):this.element.removeAttribute(this.name);}}class z extends k{constructor(t,i,s,e,o){super(t,i,s,e,o),this.type=5;}_$AI(t,i=this){var s;if((t=null!==(s=S(this,t,i,0))&&void 0!==s?s:A)===T)return;const e=this._$AH,o=t===A&&e!==A||t.capture!==e.capture||t.once!==e.once||t.passive!==e.passive,n=t!==A&&(e===A||o);o&&this.element.removeEventListener(this.name,this,e),n&&this.element.addEventListener(this.name,this,t),this._$AH=t;}handleEvent(t){var i,s;"function"==typeof this._$AH?this._$AH.call(null!==(s=null===(i=this.options)||void 0===i?void 0:i.host)&&void 0!==s?s:this.element,t):this._$AH.handleEvent(t);}}class Z{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s;}get _$AU(){return this._$AM._$AU}_$AI(t){S(this,t);}}const B=i.litHtmlPolyfillSupport;null==B||B(N,R),(null!==(t=i.litHtmlVersions)&&void 0!==t?t:i.litHtmlVersions=[]).push("2.8.0");const D=(t,i,s)=>{var e,o;const n=null!==(e=null==s?void 0:s.renderBefore)&&void 0!==e?e:i;let l=n._$litPart$;if(void 0===l){const t=null!==(o=null==s?void 0:s.renderBefore)&&void 0!==o?o:null;n._$litPart$=l=new R(i.insertBefore(u(),t),t,void 0,null!=s?s:{});}return l._$AI(t),l};
 
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */var l,o;class s extends u$1{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0;}createRenderRoot(){var t,e;const i=super.createRenderRoot();return null!==(t=(e=this.renderOptions).renderBefore)&&void 0!==t||(e.renderBefore=i.firstChild),i}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=D(i,this.renderRoot,this.renderOptions);}connectedCallback(){var t;super.connectedCallback(),null===(t=this._$Do)||void 0===t||t.setConnected(!0);}disconnectedCallback(){var t;super.disconnectedCallback(),null===(t=this._$Do)||void 0===t||t.setConnected(!1);}render(){return T}}s.finalized=!0,s._$litElement$=!0,null===(l=globalThis.litElementHydrateSupport)||void 0===l||l.call(globalThis,{LitElement:s});const n$1=globalThis.litElementPolyfillSupport;null==n$1||n$1({LitElement:s});(null!==(o=globalThis.litElementVersions)&&void 0!==o?o:globalThis.litElementVersions=[]).push("3.3.3");
+ */var l,o;class s extends u$1{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0;}createRenderRoot(){var t,e;const i=super.createRenderRoot();return null!==(t=(e=this.renderOptions).renderBefore)&&void 0!==t||(e.renderBefore=i.firstChild),i}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=D(i,this.renderRoot,this.renderOptions);}connectedCallback(){var t;super.connectedCallback(),null===(t=this._$Do)||void 0===t||t.setConnected(true);}disconnectedCallback(){var t;super.disconnectedCallback(),null===(t=this._$Do)||void 0===t||t.setConnected(false);}render(){return T}}s.finalized=true,s._$litElement$=true,null===(l=globalThis.litElementHydrateSupport)||void 0===l||l.call(globalThis,{LitElement:s});const n$1=globalThis.litElementPolyfillSupport;null==n$1||n$1({LitElement:s});(null!==(o=globalThis.litElementVersions)&&void 0!==o?o:globalThis.litElementVersions=[]).push("3.3.3");
 
-class ContentCardEditor extends s {
+const ALT_SCHEMA = [
+  { name: "temp", title: "Alternative temperature sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "feels_like", title: "Alternative feels like temperature sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "description", title: "Alternative weather description sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "press", title: "Alternative pressure sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "humid", title: "Alternative humidity sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "uv", title: "Alternative UV index sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "winddir", title: "Alternative wind bearing sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "windspeed", title: "Alternative wind speed sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "dew_point", title: "Alternative dew pointsensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "wind_gust_speed", title: "Alternative wind gust speed sensor", selector: { entity: { domain: 'sensor' } } },
+  { name: "visibility", title: "Alternative visibility sensor", selector: { entity: { domain: 'sensor' } } },
+];
+
+class WeatherChartCardEditor extends s {
   static get properties() {
     return {
-      config: { type: Object },
+      _config: { type: Object },
       currentPage: { type: String },
+      entities: { type: Array },
+      hass: { type: Object },
+      _entity: { type: String },
     };
   }
 
   constructor() {
     super();
     this.currentPage = 'card';
+    this._entity = '';
+    this.entities = [];
+    this._formValueChanged = this._formValueChanged.bind(this);
   }
 
   setConfig(config) {
+    if (!config) {
+      throw new Error("Invalid configuration");
+    }
     this._config = config;
+    this._entity = config.entity || '';
+    this.hasApparentTemperature = (
+      this.hass &&
+      this.hass.states[config.entity] &&
+      this.hass.states[config.entity].attributes &&
+      this.hass.states[config.entity].attributes.apparent_temperature !== undefined
+    ) || config.feels_like !== undefined;
+    this.hasDewpoint = (
+      this.hass &&
+      this.hass.states[config.entity] &&
+      this.hass.states[config.entity].attributes &&
+      this.hass.states[config.entity].attributes.dew_point !== undefined
+    ) || config.dew_point !== undefined;
+    this.hasWindgustspeed = (
+      this.hass &&
+      this.hass.states[config.entity] &&
+      this.hass.states[config.entity].attributes &&
+      this.hass.states[config.entity].attributes.wind_gust_speed !== undefined
+    ) || config.wind_gust_speed !== undefined;
+    this.hasVisibility = (
+      this.hass &&
+      this.hass.states[config.entity] &&
+      this.hass.states[config.entity].attributes &&
+      this.hass.states[config.entity].attributes.visibility !== undefined
+    ) || config.visibility !== undefined;
+    this.hasDescription = (
+      this.hass &&
+      this.hass.states[config.entity] &&
+      this.hass.states[config.entity].attributes &&
+      this.hass.states[config.entity].attributes.description !== undefined
+    ) || config.description !== undefined;
+    this.fetchEntities();	  
+    this.requestUpdate();
+  }
+
+  get config() {
+    return this._config;
+  }
+
+  updated(changedProperties) {
+    if (changedProperties.has('hass')) {
+      this.fetchEntities();
+    }
+    if (changedProperties.has('_config') && this._config && this._config.entity) {
+      this._entity = this._config.entity;
+    }
+  }
+
+  fetchEntities() {
+    if (this.hass) {
+      this.entities = Object.keys(this.hass.states).filter((e) => e.startsWith('weather.'));
+      this.requestUpdate();
+    }
+  }
+
+  _EntityChanged(event, key) {
+    if (!this._config) {
+      return;
+    }
+    const newConfig = { ...this._config };
+    newConfig.entity = event.target.value;
+    this._entity = event.target.value;
+    this.configChanged(newConfig);
   }
 
   configChanged(newConfig) {
@@ -626,27 +980,36 @@ class ContentCardEditor extends s {
       return;
     }
 
-    const newConfig = JSON.parse(JSON.stringify(this._config));
+    let newConfig = { ...this._config };
 
-    const keys = key.split('.');
-    let targetConfig = newConfig;
+    if (key.includes('.')) {
+      const parts = key.split('.');
+      let currentLevel = newConfig;
 
-    for (let i = 0; i < keys.length - 1; i++) {
-      const currentKey = keys[i];
-      if (!targetConfig[currentKey]) {
-        targetConfig[currentKey] = {}; 
+      for (let i = 0; i < parts.length - 1; i++) {
+        const part = parts[i];
+
+        currentLevel[part] = { ...currentLevel[part] };
+
+        currentLevel = currentLevel[part];
       }
-      targetConfig = targetConfig[currentKey];
-    }
 
-    const lastKey = keys[keys.length - 1];
-    if (lastKey === 'entity') {
-      targetConfig[lastKey] = event.target.value;
+      const finalKey = parts[parts.length - 1];
+      if (event.target.checked !== undefined) {
+        currentLevel[finalKey] = event.target.checked;
+      } else {
+        currentLevel[finalKey] = event.target.value;
+      }
     } else {
-      targetConfig[lastKey] = event.target.checked !== undefined ? event.target.checked : event.target.value;
+      if (event.target.checked !== undefined) {
+        newConfig[key] = event.target.checked;
+      } else {
+        newConfig[key] = event.target.value;
+      }
     }
 
     this.configChanged(newConfig);
+    this.requestUpdate();
   }
 
   _handleStyleChange(event) {
@@ -669,26 +1032,42 @@ class ContentCardEditor extends s {
     this.requestUpdate();
   }
 
-  _handleTapActionChange(event) {
+  _handleIconStyleChange(event) {
     if (!this._config) {
       return;
     }
     const newConfig = JSON.parse(JSON.stringify(this._config));
-    if (!newConfig.tap_action) newConfig.tap_action = {};
-    newConfig.tap_action.action = event.target.value;
+    newConfig.icon_style = event.target.value;
     this.configChanged(newConfig);
     this.requestUpdate();
+  }
+
+  _handlePrecipitationTypeChange(e) {
+    const newValue = e.target.value;
+    this.config.forecast.precipitation_type = newValue;
+  }
+
+  _formValueChanged(event) {
+    if (event.target.tagName.toLowerCase() === 'ha-form') {
+      const newConfig = event.detail.value;
+      this.configChanged(newConfig);
+      this.requestUpdate();
+    }
   }
 
   showPage(pageName) {
     this.currentPage = pageName;
     this.requestUpdate();
   }
-	
+
   render() {
+    if (this._config && this._config.entity !== this._entity) {
+      this._entity = this._config.entity;
+    }
     const forecastConfig = this._config.forecast || {};
     const unitsConfig = this._config.units || {};
     this._config.show_time !== false;
+
 
     return x`
       <style>
@@ -699,99 +1078,148 @@ class ContentCardEditor extends s {
           margin-bottom: 12px;
         }
         .page-container {
-          display: none;
+	  display: none;
         }
         .page-container.active {
           display: block;
         }
         .time-container {
           display: flex;
-          margin-bottom: 8px;
-          margin-top: 12px;
           flex-direction: row;
+          margin-bottom: 12px;
+        }
+        .icon-container {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 12px;
         }
         .switch-right {
           display: flex;
+          flex-direction: row;
           align-items: center;
+        }
+        .checkbox-container {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .textfield-container {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+	  gap: 20px;
+        }
+        .radio-container {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .radio-group {
+          display: flex;
+          align-items: center;
+        }
+        .radio-group label {
+          margin-left: 4px;
+        }
+	div.buttons-container {
+          border-bottom: 2px solid #ccc;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        }
+        .flex-container {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+        }
+        .flex-container ha-textfield {
+          flex-basis: 50%;
+          flex-grow: 1;
         }
       </style>
       <div>
-        <paper-input
-          label="Entity"
-          .value="${this._config.entity || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'entity')}"
-        ></paper-input>
-        <paper-input
-          label="Title"
-          .value="${this._config.title || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'title')}"
-        ></paper-input>
+      <div class="textfield-container">
+<ha-select
+  naturalMenuWidth
+  fixedMenuPosition
+  label="Entity"
+  .configValue=${'entity'}
+  .value=${this._entity}
+  @change=${(e) => this._EntityChanged(e, 'entity')}
+  @closed=${(ev) => ev.stopPropagation()}
+>
+  ${this.entities.map((entity) => x`<ha-list-item .value=${entity}>${entity}</ha-list-item>`)}
+</ha-select>
+      <ha-textfield
+        label="Title"
+        .value="${this._config.title || ''}"
+        @change="${(e) => this._valueChanged(e, 'title')}"
+      ></ha-textfield>
+       </div>
+
+      <h5>Forecast type:</h5>
+
+      <div class="radio-group">
+        <ha-radio
+          name="type"
+          value="daily"
+          @change="${this._handleTypeChange}"
+          .checked="${forecastConfig.type === 'daily'}"
+        ></ha-radio>
+        <label class="check-label">
+          Daily forecast
+        </label>
+      </div>
+
+      <div class="radio-group">
+        <ha-radio
+          name="type"
+          value="hourly"
+          @change="${this._handleTypeChange}"
+          .checked="${forecastConfig.type === 'hourly'}"
+        ></ha-radio>
+        <label class="check-label">
+          Hourly forecast
+        </label>
+      </div>
+
+      <h5>Chart style:</h5>
+      <div class="radio-container">
+        <div class="switch-right">
+          <ha-radio
+            name="style"
+            value="style1"
+            @change="${this._handleStyleChange}"
+            .checked="${forecastConfig.style === 'style1'}"
+          ></ha-radio>
+          <label class="check-label">
+            Chart style 1
+          </label>
+        </div>
+
+        <div class="switch-right">
+          <ha-radio
+            name="style"
+            value="style2"
+            @change="${this._handleStyleChange}"
+            .checked="${forecastConfig.style === 'style2'}"
+          ></ha-radio>
+          <label class="check-label">
+            Chart style 2
+          </label>
+        </div>
+      </div>
 
         <!-- Buttons to switch between pages -->
-        <div>
-          <button @click="${() => this.showPage('card')}">Main</button>
-          <button @click="${() => this.showPage('forecast')}">Forecast</button>
-          <button @click="${() => this.showPage('units')}">Units</button>
-          <button @click="${() => this.showPage('alternate')}">Alternate entities</button>
-          <button @click="${() => this.showPage('tap_action')}">Tap action</button>
-        </div>
-
-        <!-- Time settings -->
-        <div class="time-container">
-          <div class="switch-right">
-            <ha-switch
-              @change="${(e) => this._valueChanged(e, 'show_time')}"
-              .checked="${this._config.show_time !== false}"
-            ></ha-switch>
-            <label class="switch-label">
-              Show Current Time
-            </label>
-          </div>
-          <div class="switch-right">
-            <ha-checkbox
-              @change="${(e) => this._valueChanged(e, 'show_day')}"
-              .checked="${this._config.show_day !== false}"
-            ></ha-checkbox>
-            <label class="check-label">
-              Show Day
-            </label>
-          </div>
-          <div class="switch-right">
-            <ha-checkbox
-              @change="${(e) => this._valueChanged(e, 'show_date')}"
-              .checked="${this._config.show_date !== false}"
-            ></ha-checkbox>
-            <label class="check-label">
-              Show Date
-            </label>
-          </div>
-        </div>
-    <div>
-      <label>
-        <input type="radio" name="style" value="style1" ?checked="${forecastConfig.style === 'style1'}" @change="${this._handleStyleChange}">
-        Chart style 1
-      </label>
-      <label>
-        <input type="radio" name="style" value="style2" ?checked="${forecastConfig.style === 'style2'}" @change="${this._handleStyleChange}">
-        Chart style 2
-      </label>
-    </div>
-    <br>
-    <div>
-      <label>
-        <input type="radio" name="type" value="daily" ?checked="${forecastConfig.type === 'daily'}" @change="${this._handleTypeChange}">
-        Daily Forecast
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="type" value="hourly" ?checked="${forecastConfig.type === 'hourly'}" @change="${this._handleTypeChange}">
-        Hourly Forecast
-      </label>
-    </div>
+       <h4>Settings:</h4>
+       <div class="buttons-container">
+         <mwc-button @click="${() => this.showPage('card')}">Main</mwc-button>
+         <mwc-button @click="${() => this.showPage('forecast')}">Forecast</mwc-button>
+         <mwc-button @click="${() => this.showPage('units')}">Units</mwc-button>
+         <mwc-button @click="${() => this.showPage('alternate')}">Alternate entities</mwc-button>
+       </div>
 
         <!-- Card Settings Page -->
         <div class="page-container ${this.currentPage === 'card' ? 'active' : ''}">
-          <h4>Card setting</h4>
           <div class="switch-container">
             <ha-switch
               @change="${(e) => this._valueChanged(e, 'show_main')}"
@@ -799,6 +1227,37 @@ class ContentCardEditor extends s {
             ></ha-switch>
             <label class="switch-label">
               Show Main
+            </label>
+          </div>
+      <div class="switch-container">
+        ${this.hasApparentTemperature ? x`
+          <ha-switch
+            @change="${(e) => this._valueChanged(e, 'show_feels_like')}"
+            .checked="${this._config.show_feels_like !== false}"
+          ></ha-switch>
+          <label class="switch-label">
+            Show Feels Like Temperature
+          </label>
+        ` : ''}
+      </div>
+      <div class="switch-container">
+        ${this.hasDescription ? x`
+          <ha-switch
+            @change="${(e) => this._valueChanged(e, 'show_description')}"
+            .checked="${this._config.show_description !== false}"
+          ></ha-switch>
+          <label class="switch-label">
+            Show Weather Description
+          </label>
+        ` : ''}
+      </div>
+          <div class="switch-container">
+            <ha-switch
+              @change="${(e) => this._valueChanged(e, 'show_temperature')}"
+              .checked="${this._config.show_temperature !== false}"
+            ></ha-switch>
+            <label class="switch-label">
+              Show Current Temperature
             </label>
           </div>
           <div class="switch-container">
@@ -863,27 +1322,209 @@ class ContentCardEditor extends s {
             <label class="switch-label">
               Show Wind Speed
             </label>
-          <paper-input
+	  </div>
+      <div class="switch-container">
+        ${this.hasDewpoint ? x`
+          <ha-switch
+            @change="${(e) => this._valueChanged(e, 'show_dew_point')}"
+            .checked="${this._config.show_dew_point !== false}"
+          ></ha-switch>
+          <label class="switch-label">
+            Show Dew Point
+          </label>
+        ` : ''}
+      </div>
+      <div class="switch-container">
+        ${this.hasWindgustspeed ? x`
+          <ha-switch
+            @change="${(e) => this._valueChanged(e, 'show_wind_gust_speed')}"
+            .checked="${this._config.show_wind_gust_speed !== false}"
+          ></ha-switch>
+          <label class="switch-label">
+            Show Wind Gust Speed
+          </label>
+        ` : ''}
+      </div>
+      <div class="switch-container">
+        ${this.hasVisibility ? x`
+          <ha-switch
+            @change="${(e) => this._valueChanged(e, 'show_visibility')}"
+            .checked="${this._config.show_visibility !== false}"
+          ></ha-switch>
+          <label class="switch-label">
+            Show Visibility
+          </label>
+        ` : ''}
+      </div>
+          <div class="switch-container">
+            <ha-switch
+              @change="${(e) => this._valueChanged(e, 'show_last_changed')}"
+              .checked="${this._config.show_last_changed !== false}"
+            ></ha-switch>
+            <label class="switch-label">
+              Show when last data changed
+            </label>
+          </div>
+          <div class="switch-container">
+            <ha-switch
+              @change="${(e) => this._valueChanged(e, 'use_12hour_format')}"
+              .checked="${this._config.use_12hour_format !== false}"
+            ></ha-switch>
+            <label class="switch-label">
+              Use 12-Hour Format
+            </label>
+          </div>
+          <div class="switch-container">
+            <ha-switch
+              @change="${(e) => this._valueChanged(e, 'autoscroll')}"
+              .checked="${this._config.autoscroll !== false}"
+            ></ha-switch>
+            <label class="switch-label">
+              Autoscroll
+            </label>
+          </div>
+          <div class="time-container">
+            <div class="switch-right">
+              <ha-switch
+                @change="${(e) => this._valueChanged(e, 'show_time')}"
+                .checked="${this._config.show_time !== false}"
+              ></ha-switch>
+              <label class="switch-label">
+                Show Current Time
+              </label>
+            </div>
+            <div class="switch-right checkbox-container" style="${this._config.show_time ? 'display: flex;' : 'display: none;'}">
+              <ha-checkbox
+                @change="${(e) => this._valueChanged(e, 'show_time_seconds')}"
+                .checked="${this._config.show_time_seconds !== false}"
+              ></ha-checkbox>
+              <label class="check-label">
+                Show Seconds
+              </label>
+            </div>
+            <div class="switch-right checkbox-container" style="${this._config.show_time ? 'display: flex;' : 'display: none;'}">
+              <ha-checkbox
+                @change="${(e) => this._valueChanged(e, 'show_day')}"
+                .checked="${this._config.show_day !== false}"
+              ></ha-checkbox>
+              <label class="check-label">
+                Show Day
+              </label>
+            </div>
+            <div class="switch-right checkbox-container" style="${this._config.show_time ? 'display: flex;' : 'display: none;'}">
+              <ha-checkbox
+                @change="${(e) => this._valueChanged(e, 'show_date')}"
+                .checked="${this._config.show_date !== false}"
+              ></ha-checkbox>
+              <label class="check-label">
+                Show Date
+              </label>
+            </div>
+          </div>
+            <div class="flex-container" style="${this._config.show_time ? 'display: flex;' : 'display: none;'}">
+              <ha-textfield
+                label="Time text size"
+                type="number"
+                .value="${this._config.time_size || '26'}"
+                @change="${(e) => this._valueChanged(e, 'time_size')}"
+              ></ha-textfield>
+              <ha-textfield
+                label="Day and date text size"
+                type="number"
+                .value="${this._config.day_date_size || '15'}"
+                @change="${(e) => this._valueChanged(e, 'day_date_size')}"
+              ></ha-textfield>
+              </div>
+            <div class="icon-container">
+              <div class="switch-right">
+                <ha-switch
+                  @change="${(e) => this._valueChanged(e, 'animated_icons')}"
+                  .checked="${this._config.animated_icons === true}"
+                ></ha-switch>
+                <label class="switch-label">
+                  Use Animated Icons
+                </label>
+              </div>
+              <div class="switch-right radio-container" style="${this._config.animated_icons ? 'display: flex;' : 'display: none;'}">
+                  <ha-radio
+                    name="icon_style"
+                    value="style1"
+                    @change="${this._handleIconStyleChange}"
+                    .checked="${this._config.icon_style === 'style1'}"
+                  ></ha-radio>
+                  <label class="check-label">
+                    Style 1
+                  </label>
+                </div>
+              <div class="switch-right radio-container" style="${this._config.animated_icons ? 'display: flex;' : 'display: none;'}">
+                  <ha-radio
+                    name="icon_style"
+                    value="style2"
+                    @change="${this._handleIconStyleChange}"
+                    .checked="${this._config.icon_style === 'style2'}"
+                  ></ha-radio>
+                  <label class="check-label">
+                    Style 2
+                  </label>
+                </div>
+              </div>
+       <div class="textfield-container">
+         <ha-textfield
+           label="Icon Size for animated or custom icons"
+           type="number"
+           .value="${this._config.icons_size || '25'}"
+           @change="${(e) => this._valueChanged(e, 'icons_size')}"
+         ></ha-textfield>
+          <ha-textfield
             label="Curent temperature Font Size"
+           type="number"
             .value="${this._config.current_temp_size || '28'}"
-            @value-changed="${(e) => this._valueChanged(e, 'current_temp_size')}"
-          ></paper-input>
-        <paper-input
+            @change="${(e) => this._valueChanged(e, 'current_temp_size')}"
+          ></ha-textfield>
+        <ha-textfield
           label="Custom icon path"
           .value="${this._config.icons || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'icons')}"
-        ></paper-input>
-          </div>
+          @change="${(e) => this._valueChanged(e, 'icons')}"
+        ></ha-textfield>
+         <ha-select
+           naturalMenuWidth
+           fixedMenuPosition
+           label="Select custom language"
+           .configValue=${''}
+           .value=${this._config.locale}
+           @change=${(e) => this._valueChanged(e, 'locale')}
+           @closed=${(ev) => ev.stopPropagation()}
+         >
+           <ha-list-item .value=${''}>HA Default</ha-list-item>
+           <ha-list-item .value=${'bg'}>Bulgarian</ha-list-item>
+           <ha-list-item .value=${'ca'}>Catalan</ha-list-item>
+           <ha-list-item .value=${'cs'}>Czech</ha-list-item>
+           <ha-list-item .value=${'da'}>Danish</ha-list-item>
+           <ha-list-item .value=${'nl'}>Dutch</ha-list-item>
+           <ha-list-item .value=${'en'}>English</ha-list-item>
+           <ha-list-item .value=${'fi'}>Finnish</ha-list-item>
+           <ha-list-item .value=${'fr'}>French</ha-list-item>
+           <ha-list-item .value=${'de'}>German</ha-list-item>
+           <ha-list-item .value=${'el'}>Greek</ha-list-item>
+           <ha-list-item .value=${'hu'}>Hungarian</ha-list-item>
+           <ha-list-item .value=${'it'}>Italian</ha-list-item>
+           <ha-list-item .value=${'lt'}>Lithuanian</ha-list-item>
+           <ha-list-item .value=${'no'}>Norwegian</ha-list-item>
+           <ha-list-item .value=${'pl'}>Polish</ha-list-item>
+           <ha-list-item .value=${'pt'}>Portuguese</ha-list-item>
+           <ha-list-item .value=${'ro'}>Romanian</ha-list-item>
+           <ha-list-item .value=${'ru'}>Russian</ha-list-item>
+           <ha-list-item .value=${'sk'}>Slovak</ha-list-item>
+           <ha-list-item .value=${'es'}>Spanish</ha-list-item>
+           <ha-list-item .value=${'sv'}>Swedish</ha-list-item>
+	   <ha-list-item .value=${'uk'}>Ukrainian</ha-list-item>
+    	   <ha-list-item .value=${'ko'}>한국어</ha-list-item>
+        </ha-select>
         </div>
+      </div>
 
         <!-- Forecast Settings Page -->
         <div class="page-container ${this.currentPage === 'forecast' ? 'active' : ''}">
-          <h4>Forecast settings</h4>
-          <paper-input
-            label="Labels Font Size"
-            .value="${forecastConfig.labels_font_size || '11'}"
-            @value-changed="${(e) => this._valueChanged(e, 'forecast.labels_font_size')}"
-          ></paper-input>
           <div class="switch-container">
             <ha-switch
               @change="${(e) => this._valueChanged(e, 'forecast.condition_icons')}"
@@ -911,107 +1552,119 @@ class ContentCardEditor extends s {
               Rounding Temperatures
             </label>
           </div>
+          <div class="switch-container">
+            <ha-switch
+              @change="${(e) => this._valueChanged(e, 'forecast.disable_animation')}"
+              .checked="${forecastConfig.disable_animation !== false}"
+            ></ha-switch>
+            <label class="switch-label">
+              Disable Chart Animation
+            </label>
+          </div>
+	  <div class="textfield-container">
+          <ha-select
+            naturalMenuWidth
+            fixedMenuPosition
+            label="Precipitation Type (Probability if supported by the weather entity)"
+            .configValue=${'forecast.precipitation_type'}
+            .value=${forecastConfig.precipitation_type}
+            @change=${(e) => this._valueChanged(e, 'forecast.precipitation_type')}
+            @closed=${(ev) => ev.stopPropagation()}
+          >
+            <ha-list-item .value=${'rainfall'}>Rainfall</ha-list-item>
+            <ha-list-item .value=${'probability'}>Probability</ha-list-item>
+          </ha-select>
+         <div class="switch-container" ?hidden=${forecastConfig.precipitation_type !== 'rainfall'}>
+             <ha-switch
+               @change="${(e) => this._valueChanged(e, 'forecast.show_probability')}"
+               .checked="${forecastConfig.show_probability !== false}"
+             ></ha-switch>
+             <label class="switch-label">
+               Show precipitation probability
+             </label>
+         </div>
+          <div class="textfield-container">
+            <div class="flex-container">
+              <ha-textfield
+                label="Precipitation Bar Size %"
+                type="number"
+                max="100"
+                min="0"
+                .value="${forecastConfig.precip_bar_size || '100'}"
+                @change="${(e) => this._valueChanged(e, 'forecast.precip_bar_size')}"
+              ></ha-textfield>
+              <ha-textfield
+                label="Labels Font Size"
+                type="number"
+                .value="${forecastConfig.labels_font_size || '11'}"
+                @change="${(e) => this._valueChanged(e, 'forecast.labels_font_size')}"
+              ></ha-textfield>
+              </div>
+	    <div class="flex-container">
+              <ha-textfield
+                label="Chart height"
+                type="number"
+                .value="${forecastConfig.chart_height || '180'}"
+                @change="${(e) => this._valueChanged(e, 'forecast.chart_height')}"
+              ></ha-textfield>
+              <ha-textfield
+                label="Number of forecasts"
+                type="number"
+                .value="${forecastConfig.number_of_forecasts || '0'}"
+                @change="${(e) => this._valueChanged(e, 'forecast.number_of_forecasts')}"
+              ></ha-textfield>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Units Page -->
         <div class="page-container ${this.currentPage === 'units' ? 'active' : ''}">
-          <h4>Unit settings</h4>
-          <paper-input
-            label="Convert pressure to 'hPa' or 'mmHg' or 'inHg'"
-            .value="${unitsConfig.pressure || ''}"
-            @value-changed="${(e) => this._valueChanged(e, 'units.pressure')}"
-          ></paper-input>
-          <paper-input
-            label="Convert wind speed to 'km/h' or 'm/s' or 'Bft' or 'mph'"
-            .value="${unitsConfig.speed || ''}"
-            @value-changed="${(e) => this._valueChanged(e, 'units.speed')}"
-          ></paper-input>
-        </div>
-
-        <!-- Tap Action Page -->
-        <div class="page-container ${this.currentPage === 'tap_action' ? 'active' : ''}">
-          <h4>Tap action</h4>
-          <div>
-            <label>
-              <input type="radio" name="tap_action" value="more-info"
-                ?checked="${(this._config.tap_action || {}).action === 'more-info' || !this._config.tap_action}"
-                @change="${this._handleTapActionChange}">
-              More info
-            </label><br>
-            <label>
-              <input type="radio" name="tap_action" value="navigate"
-                ?checked="${(this._config.tap_action || {}).action === 'navigate'}"
-                @change="${this._handleTapActionChange}">
-              Navigate
-            </label><br>
-            <label>
-              <input type="radio" name="tap_action" value="url"
-                ?checked="${(this._config.tap_action || {}).action === 'url'}"
-                @change="${this._handleTapActionChange}">
-              URL
-            </label><br>
-            <label>
-              <input type="radio" name="tap_action" value="none"
-                ?checked="${(this._config.tap_action || {}).action === 'none'}"
-                @change="${this._handleTapActionChange}">
-              None
-            </label>
+          <div class="textfield-container">
+            <ha-select
+              naturalMenuWidth
+              fixedMenuPosition
+              label="Convert pressure to"
+              .configValue=${'units.pressure'}
+              .value=${unitsConfig.pressure}
+              @change=${(e) => this._valueChanged(e, 'units.pressure')}
+              @closed=${(ev) => ev.stopPropagation()}
+            >
+              <ha-list-item .value=${'hPa'}>hPa</ha-list-item>
+              <ha-list-item .value=${'mmHg'}>mmHg</ha-list-item>
+              <ha-list-item .value=${'inHg'}>inHg</ha-list-item>
+            </ha-select>
+            <ha-select
+              naturalMenuWidth
+              fixedMenuPosition
+              label="Convert wind speed to"
+              .configValue=${'units.speed'}
+              .value=${unitsConfig.speed}
+              @change=${(e) => this._valueChanged(e, 'units.speed')}
+              @closed=${(ev) => ev.stopPropagation()}
+            >
+              <ha-list-item .value=${'km/h'}>km/h</ha-list-item>
+              <ha-list-item .value=${'m/s'}>m/s</ha-list-item>
+              <ha-list-item .value=${'Bft'}>Bft</ha-list-item>
+              <ha-list-item .value=${'mph'}>mph</ha-list-item>
+            </ha-select>
           </div>
-          ${(this._config.tap_action || {}).action === 'navigate' ? x`
-            <paper-input
-              label="Navigation path (e.g. /lovelace/weather)"
-              .value="${(this._config.tap_action || {}).navigation_path || ''}"
-              @value-changed="${(e) => this._valueChanged(e, 'tap_action.navigation_path')}"
-            ></paper-input>
-          ` : ''}
-          ${(this._config.tap_action || {}).action === 'url' ? x`
-            <paper-input
-              label="URL"
-              .value="${(this._config.tap_action || {}).url_path || ''}"
-              @value-changed="${(e) => this._valueChanged(e, 'tap_action.url_path')}"
-            ></paper-input>
-          ` : ''}
         </div>
 
         <!-- Alternate Page -->
         <div class="page-container ${this.currentPage === 'alternate' ? 'active' : ''}">
-          <h4>Alternate entities</h4>
-        <paper-input
-          label="Alternative temperature sensor"
-          .value="${this._config.temp || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'temp')}"
-        ></paper-input>
-        <paper-input
-          label="Alternative pressure sensor"
-          .value="${this._config.press || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'press')}"
-        ></paper-input>
-        <paper-input
-          label="Alternative humidity sensor"
-          .value="${this._config.humid || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'humid')}"
-        ></paper-input>
-        <paper-input
-          label="Alternative UV index sensor"
-          .value="${this._config.uv || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'uv')}"
-        ></paper-input>
-        <paper-input
-          label="Alternative wind bearing sensor"
-          .value="${this._config.winddir || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'winddir')}"
-        ></paper-input>
-        <paper-input
-          label="Alternative wind speed sensor"
-          .value="${this._config.windspeed || ''}"
-          @value-changed="${(e) => this._valueChanged(e, 'windspeed')}"
-        ></paper-input>
+          <h5>Alternative sensors for the main card attributes:</h5>
+          <ha-form
+            .data=${this._config}
+            .schema=${ALT_SCHEMA}
+            .hass=${this.hass}
+            @value-changed=${this._formValueChanged}
+          ></ha-form>
         </div>
-      </div>
     `;
   }
 }
-customElements.define("content-card-editor", ContentCardEditor);
+customElements.define("weather-chart-card-editor", WeatherChartCardEditor);
 
 /**
  * @license
@@ -1684,11 +2337,7 @@ function each(loopable, fn, thisArg, reverse) {
     let i, len, keys;
     if (isArray(loopable)) {
         len = loopable.length;
-        if (reverse) {
-            for(i = len - 1; i >= 0; i--){
-                fn.call(thisArg, loopable[i], i);
-            }
-        } else {
+        {
             for(i = 0; i < len; i++){
                 fn.call(thisArg, loopable[i], i);
             }
@@ -3203,7 +3852,6 @@ function _readValueToProps(value, props) {
  * @param info.cacheable - Will be set to `false` if option is not cacheable.
  * @since 2.7.0
  */ function resolve(inputs, context, index, info) {
-    let cacheable = true;
     let i, ilen, value;
     for(i = 0, ilen = inputs.length; i < ilen; ++i){
         value = inputs[i];
@@ -3212,16 +3860,11 @@ function _readValueToProps(value, props) {
         }
         if (context !== undefined && typeof value === 'function') {
             value = value(context);
-            cacheable = false;
         }
         if (index !== undefined && isArray(value)) {
             value = value[index % value.length];
-            cacheable = false;
         }
         if (value !== undefined) {
-            if (info && !cacheable) {
-                info.cacheable = false;
-            }
             return value;
         }
     }
@@ -7187,7 +7830,6 @@ function binarySearch(metaset, axis, value, intersect) {
     return items;
 }
  var Interaction = {
-    evaluateInteractionItems,
     modes: {
  index (chart, e, options, useFinalPosition) {
             const position = getRelativePosition(e, chart);
@@ -7450,7 +8092,6 @@ function placeBoxes(boxes, chartArea, params, stacks) {
     for (const layout of boxes){
         const box = layout.box;
         const stack = stacks[layout.stack] || {
-            count: 1,
             placed: 0,
             weight: 1
         };
@@ -14873,14 +15514,14 @@ class LogarithmicScale extends Scale {
                 setMax(10);
             } else {
                 setMin(changeExponent(min, -1));
-                setMax(changeExponent(max, +1));
+                setMax(changeExponent(max, 1));
             }
         }
         if (min <= 0) {
             setMin(changeExponent(max, -1));
         }
         if (max <= 0) {
-            setMax(changeExponent(min, +1));
+            setMax(changeExponent(min, 1));
         }
         this.min = min;
         this.max = max;
@@ -17322,7 +17963,7 @@ Chart.register(...registerables, plugin);
 class WeatherChartCard extends s {
 
 static getConfigElement() {
-  return document.createElement("content-card-editor");
+  return document.createElement("weather-chart-card-editor");
 }
 
 static getStubConfig(hass, unusedEntities, allEntities) {
@@ -17333,9 +17974,11 @@ static getStubConfig(hass, unusedEntities, allEntities) {
   return {
     entity,
     show_main: true,
+    show_temperature: true,
     show_current_condition: true,
     show_attributes: true,
     show_time: false,
+    show_time_seconds: false,
     show_day: false,
     show_date: false,
     show_humidity: true,
@@ -17343,13 +17986,28 @@ static getStubConfig(hass, unusedEntities, allEntities) {
     show_wind_direction: true,
     show_wind_speed: true,
     show_sun: true,
+    show_feels_like: false,
+    show_dew_point: false,
+    show_wind_gust_speed: false,
+    show_visibility: false,
+    show_last_changed: false,
+    use_12hour_format: false,
+    icons_size: 25,
+    animated_icons: false,
+    icon_style: 'style1',
+    autoscroll: false,
     forecast: {
+      precipitation_type: 'rainfall',
+      show_probability: false,
       labels_font_size: '11',
+      precip_bar_size: '100',
       style: 'style1',
       show_wind_forecast: true,
       condition_icons: true,
       round_temp: false,
       type: 'daily',
+      number_of_forecasts: '0', 
+      disable_animation: false, 
     },
   };
 }
@@ -17365,7 +18023,7 @@ static getStubConfig(hass, unusedEntities, allEntities) {
       humidity: {type: Object},
       pressure: {type: Object},
       windSpeed: {type: Object},
-      windDirection: {type: Object},
+      windDirection: {type: Number},
       forecastChart: {type: Object},
       forecastItems: {type: Number},
       forecasts: { type: Array }
@@ -17375,11 +18033,25 @@ static getStubConfig(hass, unusedEntities, allEntities) {
 setConfig(config) {
   const cardConfig = {
     icons_size: 25,
+    animated_icons: false,
+    icon_style: 'style1',
     current_temp_size: 28,
+    time_size: 26,
+    day_date_size: 15,
+    show_feels_like: false,
+    show_dew_point: false,
+    show_wind_gust_speed: false,
+    show_visibility: false,
+    show_last_changed: false,
+    show_description: false,
     tap_action: { action: 'more-info' },
     ...config,
     forecast: {
+      precipitation_type: 'rainfall',
+      show_probability: false,
       labels_font_size: 11,
+      chart_height: 180,
+      precip_bar_size: 100,
       style: 'style1',
       temperature1_color: 'rgba(255, 152, 0, 1.0)',
       temperature2_color: 'rgba(68, 115, 158, 1.0)',
@@ -17388,6 +18060,8 @@ setConfig(config) {
       show_wind_forecast: true,
       round_temp: false,
       type: 'daily',
+      number_of_forecasts: '0',
+      '12hourformat': false,
       ...config.forecast,
     },
     units: {
@@ -17398,6 +18072,10 @@ setConfig(config) {
 
   cardConfig.units.speed = config.speed ? config.speed : cardConfig.units.speed;
 
+  this.baseIconPath = cardConfig.icon_style === 'style2' ?
+    'https://cdn.jsdelivr.net/gh/mlamberts78/weather-chart-card/dist/icons2/':
+    'https://cdn.jsdelivr.net/gh/mlamberts78/weather-chart-card/dist/icons/' ;
+
   this.config = cardConfig;
   if (!config.entity) {
     throw new Error('Please, define entity in the card config');
@@ -17406,10 +18084,11 @@ setConfig(config) {
 
 set hass(hass) {
   this._hass = hass;
-  this.language = hass.selectedLanguage || hass.language;
+  this.language = this.config.locale || hass.selectedLanguage || hass.language;
   this.sun = 'sun.sun' in hass.states ? hass.states['sun.sun'] : null;
   this.unitSpeed = this.config.units.speed ? this.config.units.speed : this.weather && this.weather.attributes.wind_speed_unit;
   this.unitPressure = this.config.units.pressure ? this.config.units.pressure : this.weather && this.weather.attributes.pressure_unit;
+  this.unitVisibility = this.config.units.visibility ? this.config.units.visibility : this.weather && this.weather.attributes.visibility_unit;
   this.weather = this.config.entity in hass.states
     ? hass.states[this.config.entity]
     : null;
@@ -17420,7 +18099,18 @@ set hass(hass) {
     this.pressure = this.config.press ? hass.states[this.config.press].state : this.weather.attributes.pressure;
     this.uv_index = this.config.uv ? hass.states[this.config.uv].state : this.weather.attributes.uv_index;
     this.windSpeed = this.config.windspeed ? hass.states[this.config.windspeed].state : this.weather.attributes.wind_speed;
-    this.windDirection = this.config.winddir ? hass.states[this.config.winddir].state : this.weather.attributes.wind_bearing;
+    this.dew_point = this.config.dew_point ? hass.states[this.config.dew_point].state : this.weather.attributes.dew_point;
+    this.wind_gust_speed = this.config.wind_gust_speed ? hass.states[this.config.wind_gust_speed].state : this.weather.attributes.wind_gust_speed;
+    this.visibility = this.config.visibility ? hass.states[this.config.visibility].state : this.weather.attributes.visibility;
+
+    if (this.config.winddir && hass.states[this.config.winddir] && hass.states[this.config.winddir].state !== undefined) {
+      this.windDirection = parseFloat(hass.states[this.config.winddir].state);
+    } else {
+      this.windDirection = this.weather.attributes.wind_bearing;
+    }
+
+    this.feels_like = this.config.feels_like && hass.states[this.config.feels_like] ? hass.states[this.config.feels_like].state : this.weather.attributes.apparent_temperature;
+    this.description = this.config.description && hass.states[this.config.description] ? hass.states[this.config.description].state : this.weather.attributes.description;
   }
 
   if (this.weather && !this.forecastSubscriber) {
@@ -17455,21 +18145,73 @@ subscribeForecastEvents() {
     return (this.weather.attributes.supported_features & feature) !== 0;
   }
 
+  constructor() {
+    super();
+    this.resizeObserver = null;
+    this.resizeInitialized = false;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    if (!this.resizeInitialized) {
+      this.delayedAttachResizeObserver();
+    }
+  }
+
+  delayedAttachResizeObserver() {
+    setTimeout(() => {
+      this.attachResizeObserver();
+      this.resizeInitialized = true;
+    }, 0);
+  }
+
   disconnectedCallback() {
+    super.disconnectedCallback();
+    this.detachResizeObserver();
     if (this.forecastSubscriber) {
       this.forecastSubscriber.then((unsub) => unsub());
     }
-    super.disconnectedCallback();
   }
 
-  constructor() {
-    super();
+  attachResizeObserver() {
+    this.resizeObserver = new ResizeObserver(() => {
+      this.measureCard();
+    });
+    const card = this.shadowRoot.querySelector('ha-card');
+    if (card) {
+      this.resizeObserver.observe(card);
+    }
   }
 
-  ll(str) {
-    if (locale[this.language] === undefined) return locale.en[str];
-    return locale[this.language][str];
+  detachResizeObserver() {
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+      this.resizeObserver = null;
+    }
   }
+
+measureCard() {
+  const card = this.shadowRoot.querySelector('ha-card');
+  let fontSize = this.config.forecast.labels_font_size;
+  const numberOfForecasts = this.config.forecast.number_of_forecasts || 0;
+
+  if (!card) {
+    return;
+  }
+
+  this.forecastItems = numberOfForecasts > 0 ? numberOfForecasts : Math.round(card.offsetWidth / (fontSize * 6));
+  this.drawChart();
+}
+
+ll(str) {
+  const selectedLocale = this.config.locale || this.language || 'en';
+
+  if (locale[selectedLocale] === undefined) {
+    return locale.en[str];
+  }
+
+  return locale[selectedLocale][str];
+}
 
   getCardSize() {
     return 4;
@@ -17480,17 +18222,18 @@ subscribeForecastEvents() {
   }
 
   getWeatherIcon(condition, sun) {
-    if (this.config.icons) {
-      return `${this.config.icons}${
-        sun == 'below_horizon'
-        ? weatherIconsNight[condition]
-        : weatherIconsDay[condition]}.svg`
+    if (this.config.animated_icons === true) {
+      const iconName = sun === 'below_horizon' ? weatherIconsNight[condition] : weatherIconsDay[condition];
+      return `${this.baseIconPath}${iconName}.svg`;
+    } else if (this.config.icons) {
+      const iconName = sun === 'below_horizon' ? weatherIconsNight[condition] : weatherIconsDay[condition];
+      return `${this.config.icons}${iconName}.svg`;
     }
     return weatherIcons[condition];
   }
 
 getWindDirIcon(deg) {
-  if ( typeof deg == 'number' ) {
+  if (typeof deg === 'number') {
     return cardinalDirectionsIcon[parseInt((deg + 22.5) / 45.0)];
   } else {
     var i = 9;
@@ -17522,11 +18265,11 @@ getWindDirIcon(deg) {
       case "W":
         i = 6;
         break;
-      case "WNW":
       case "NW":
+      case "NNW":
         i = 7;
         break;
-      case "NNW":
+      case "WNW":
         i = 8;
         break;
       default:
@@ -17538,7 +18281,7 @@ getWindDirIcon(deg) {
 }
 
 getWindDir(deg) {
-  if ( typeof deg == 'number' ) {
+  if (typeof deg === 'number') {
     return this.ll('cardinalDirections')[parseInt((deg + 11.25) / 22.5)];
   } else {
     return deg;
@@ -17585,6 +18328,10 @@ async firstUpdated(changedProperties) {
   this.measureCard();
   await new Promise(resolve => setTimeout(resolve, 0));
   this.drawChart();
+
+  if (this.config.autoscroll) {
+    this.autoscroll();
+  }
 }
 
 
@@ -17592,8 +18339,30 @@ async updated(changedProperties) {
   await this.updateComplete;
 
   if (changedProperties.has('config')) {
+    const oldConfig = changedProperties.get('config');
+
+    const entityChanged = oldConfig && this.config.entity !== oldConfig.entity;
+    const forecastTypeChanged = oldConfig && this.config.forecast.type !== oldConfig.forecast.type;
+    const autoscrollChanged = oldConfig && this.config.autoscroll !== oldConfig.autoscroll;
+
+    if (entityChanged || forecastTypeChanged) {
+      if (this.forecastSubscriber && typeof this.forecastSubscriber === 'function') {
+        this.forecastSubscriber();
+      }
+
+      this.subscribeForecastEvents();
+    }
+
     if (this.forecasts && this.forecasts.length) {
       this.drawChart();
+    }
+
+    if (autoscrollChanged) {
+      if (!this.config.autoscroll) {
+        this.autoscroll();
+      } else {
+        this.cancelAutoscroll();
+      }
     }
   }
 
@@ -17602,14 +18371,35 @@ async updated(changedProperties) {
   }
 }
 
-  measureCard() {
-    const card = this.shadowRoot.querySelector('ha-card');
-    let fontSize = this.config.forecast.labels_font_size;
-    if (!card) {
-      return;
-    }
-    this.forecastItems = Math.round(card.offsetWidth / (fontSize * 6));
+autoscroll() {
+  if (this.autoscrollTimeout) {
+    // Autscroll already set, nothing to do
+    return;
   }
+
+  const updateChartOncePerHour = () => {
+    const now = new Date();
+    const nextHour = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        now.getHours()+1,
+    );
+    this.autoscrollTimeout = setTimeout(() => {
+      this.autoscrollTimeout = null;
+      this.updateChart();
+      drawChartOncePerHour();
+    }, nextHour - now);
+  };
+
+  updateChartOncePerHour();
+}
+
+cancelAutoscroll() {
+  if (this.autoscrollTimeout) {
+    clearTimeout(this.autoscrollTimeout);
+  }
+}
 
 drawChart({ config, language, weather, forecastItems } = this) {
   if (!this.forecasts || !this.forecasts.length) {
@@ -17627,34 +18417,13 @@ drawChart({ config, language, weather, forecastItems } = this) {
   }
   var tempUnit = this._hass.config.unit_system.temperature;
   var lengthUnit = this._hass.config.unit_system.length;
-  var precipUnit = lengthUnit === 'km' ? this.ll('units')['mm'] : this.ll('units')['in'];
-  var forecast = this.forecasts ? this.forecasts.slice(0, forecastItems) : [];
-  if (new Date(forecast[1].datetime) - new Date(forecast[0].datetime) < 864e5) {
-    var mode = 'hourly';
+  if (config.forecast.precipitation_type === 'probability') {
+    var precipUnit = '%';
   } else {
-    var mode = 'daily';
+    var precipUnit = lengthUnit === 'km' ? this.ll('units')['mm'] : this.ll('units')['in'];
   }
-  var roundTemp = config.forecast.round_temp == true;
-  var i;
-  var dateTime = [];
-  var tempHigh = [];
-  var tempLow = [];
-  var precip = [];
-  for (i = 0; i < forecast.length; i++) {
-    var d = forecast[i];
-    dateTime.push(d.datetime);
-    tempHigh.push(d.temperature);
-    if (typeof d.templow !== 'undefined') {
-      tempLow.push(d.templow);
-    }
-    if (roundTemp) {
-      tempHigh[i] = Math.round(tempHigh[i]);
-      if (typeof d.templow !== 'undefined') {
-        tempLow[i] = Math.round(tempLow[i]);
-      }
-    }
-    precip.push(d.precipitation);
-  }
+  const data = this.computeForecastData();
+
   var style = getComputedStyle(document.body);
   var backgroundColor = style.getPropertyValue('--card-background-color');
   var textColor = style.getPropertyValue('--primary-text-color');
@@ -17666,6 +18435,18 @@ drawChart({ config, language, weather, forecastItems } = this) {
   }
 
   const ctx = canvas.getContext('2d');
+
+  let precipMax;
+
+  if (config.forecast.precipitation_type === 'probability') {
+    precipMax = 100;
+  } else {
+    if (config.forecast.type === 'hourly') {
+      precipMax = lengthUnit === 'km' ? 4 : 1;
+    } else {
+      precipMax = lengthUnit === 'km' ? 20 : 1;
+    }
+  }
 
   Chart.defaults.color = textColor;
   Chart.defaults.scale.grid.color = dividerColor;
@@ -17679,7 +18460,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
     {
       label: this.ll('tempHi'),
       type: 'line',
-      data: tempHigh,
+      data: data.tempHigh,
       yAxisID: 'TempAxis',
       borderColor: config.forecast.temperature1_color,
       backgroundColor: config.forecast.temperature1_color,
@@ -17687,7 +18468,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
     {
       label: this.ll('tempLo'),
       type: 'line',
-      data: tempLow,
+      data: data.tempLow,
       yAxisID: 'TempAxis',
       borderColor: config.forecast.temperature2_color,
       backgroundColor: config.forecast.temperature2_color,
@@ -17695,33 +18476,52 @@ drawChart({ config, language, weather, forecastItems } = this) {
     {
       label: this.ll('precip'),
       type: 'bar',
-      data: precip,
+      data: data.precip,
       yAxisID: 'PrecipAxis',
       borderColor: config.forecast.precipitation_color,
       backgroundColor: config.forecast.precipitation_color,
-      barPercentage: 1.0,
+      barPercentage: config.forecast.precip_bar_size / 100,
       categoryPercentage: 1.0,
       datalabels: {
         display: function (context) {
-          return context.dataset.data[context.dataIndex] > 0 ? 'auto' : false;
+          return context.dataset.data[context.dataIndex] > 0 ? 'true' : false;
         },
-        formatter: function (value, context) {
-          if (context.dataset.data[context.dataIndex] > 9) {
-            return Math.round(context.dataset.data[context.dataIndex]) + ' ' + precipUnit;
+      formatter: function (value, context) {
+        const precipitationType = config.forecast.precipitation_type;
+
+        const rainfall = context.dataset.data[context.dataIndex];
+        const probability = data.forecast[context.dataIndex].precipitation_probability;
+
+        let formattedValue;
+        if (precipitationType === 'rainfall') {
+          if (probability !== undefined && probability !== null && config.forecast.show_probability) {
+	    formattedValue = `${rainfall > 9 ? Math.round(rainfall) : rainfall.toFixed(1)} ${precipUnit}\n${Math.round(probability)}%`;
+          } else {
+            formattedValue = `${rainfall > 9 ? Math.round(rainfall) : rainfall.toFixed(1)} ${precipUnit}`;
           }
-          return context.dataset.data[context.dataIndex].toFixed(1) + ' ' + precipUnit;
-        },
+        } else {
+          formattedValue = `${rainfall > 9 ? Math.round(rainfall) : rainfall.toFixed(1)} ${precipUnit}`;
+        }
+
+        formattedValue = formattedValue.replace('\n', '\n\n');
+
+        return formattedValue;
+      },
+        textAlign: 'center',
+        textBaseline: 'middle',
         align: 'top',
         anchor: 'start',
-        offset: -8,
+        offset: -10,
       },
     },
   ];
 
+  const chart_text_color = (config.forecast.chart_text_color === 'auto') ? textColor : config.forecast.chart_text_color;
+
   if (config.forecast.style === 'style2') {
     datasets[0].datalabels = {
       display: function (context) {
-        return context.dataset.data[context.dataIndex] > 0 ? 'auto' : false;
+        return 'true';
       },
       formatter: function (value, context) {
         return context.dataset.data[context.dataIndex] + '°';
@@ -17730,7 +18530,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
       anchor: 'center',
       backgroundColor: 'transparent',
       borderColor: 'transparent',
-      color: config.forecast.chart_text_color || config.forecast.temperature1_color,
+      color: chart_text_color || config.forecast.temperature1_color,
       font: {
         size: parseInt(config.forecast.labels_font_size) + 1,
         lineHeight: 0.7,
@@ -17739,7 +18539,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
 
     datasets[1].datalabels = {
       display: function (context) {
-        return context.dataset.data[context.dataIndex] > 0 ? 'auto' : false;
+        return 'true';
       },
       formatter: function (value, context) {
         return context.dataset.data[context.dataIndex] + '°';
@@ -17748,7 +18548,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
       anchor: 'center',
       backgroundColor: 'transparent',
       borderColor: 'transparent',
-      color: config.forecast.chart_text_color || config.forecast.temperature2_color,
+      color: chart_text_color || config.forecast.temperature2_color,
       font: {
         size: parseInt(config.forecast.labels_font_size) + 1,
         lineHeight: 0.7,
@@ -17759,11 +18559,12 @@ drawChart({ config, language, weather, forecastItems } = this) {
   this.forecastChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: dateTime,
+      labels: data.dateTime,
       datasets: datasets,
     },
     options: {
       maintainAspectRatio: false,
+      animation: config.forecast.disable_animation === true ? { duration: 0 } : {},
       layout: {
         padding: {
           bottom: 10,
@@ -17780,26 +18581,47 @@ drawChart({ config, language, weather, forecastItems } = this) {
             color: dividerColor,
           },
           ticks: {
-            maxRotation: 0,
-            color: config.forecast.chart_datetime_color || textColor,
-            padding: 10,
-            callback: function (value, index, values) {
-              var datetime = this.getLabelForValue(value);
-              var dateObj = new Date(datetime);
-              var weekday = dateObj.toLocaleString(language, { weekday: 'short' }).toUpperCase();
-              var time = dateObj.toLocaleTimeString(language, { hour12: false, hour: 'numeric', minute: 'numeric' });
-              if (mode === 'hourly') {
-                return time;
-              }
-              return weekday;
-            },
+              maxRotation: 0,
+              color: config.forecast.chart_datetime_color || textColor,
+              padding: config.forecast.precipitation_type === 'rainfall' && config.forecast.show_probability && config.forecast.type !== 'hourly' ? 4 : 10,
+              callback: function (value, index, values) {
+                  var datetime = this.getLabelForValue(value);
+                  var dateObj = new Date(datetime);
+        
+                  var timeFormatOptions = {
+                      hour12: config.use_12hour_format,
+                      hour: 'numeric',
+                      ...(config.use_12hour_format ? {} : { minute: 'numeric' }),
+                  };
+
+                  var time = dateObj.toLocaleTimeString(language, timeFormatOptions);
+
+                  if (dateObj.getHours() === 0 && dateObj.getMinutes() === 0 && config.forecast.type === 'hourly') {
+                      var dateFormatOptions = {
+                          day: 'numeric',
+                          month: 'short',
+                      };
+                      var date = dateObj.toLocaleDateString(language, dateFormatOptions);
+                      time = time.replace('a.m.', 'AM').replace('p.m.', 'PM');
+                      return [date, time];
+                  }
+
+                  if (config.forecast.type !== 'hourly') {
+                      var weekday = dateObj.toLocaleString(language, { weekday: 'short' }).toUpperCase();
+                      return weekday;
+                  }
+
+                  time = time.replace('a.m.', 'AM').replace('p.m.', 'PM');
+                  return time;
+              },
           },
+          reverse: document.dir === 'rtl' ? true : false,
         },
         TempAxis: {
           position: 'left',
           beginAtZero: false,
-          suggestedMin: Math.min(...tempHigh, ...tempLow) - 5,
-          suggestedMax: Math.max(...tempHigh, ...tempLow) + 3,
+          suggestedMin: Math.min(...data.tempHigh, ...data.tempLow) - 5,
+          suggestedMax: Math.max(...data.tempHigh, ...data.tempLow) + 3,
           grid: {
             display: false,
             drawTicks: false,
@@ -17810,7 +18632,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
         },
         PrecipAxis: {
           position: 'right',
-          suggestedMax: lengthUnit === 'km' ? 20 : 1,
+          suggestedMax: precipMax,
           grid: {
             display: false,
             drawTicks: false,
@@ -17829,8 +18651,8 @@ drawChart({ config, language, weather, forecastItems } = this) {
           borderColor: context => context.dataset.backgroundColor,
           borderRadius: 0,
           borderWidth: 1.5,
-          padding: 4,
-          color: config.forecast.chart_text_color || textColor,
+          padding: config.forecast.precipitation_type === 'rainfall' && config.forecast.show_probability && config.forecast.type !== 'hourly' ? 3 : 4,
+          color: chart_text_color || textColor,
           font: {
             size: config.forecast.labels_font_size,
             lineHeight: 0.7,
@@ -17851,15 +18673,20 @@ drawChart({ config, language, weather, forecastItems } = this) {
                 weekday: 'short',
                 hour: 'numeric',
                 minute: 'numeric',
+                hour12: config.use_12hour_format,
               });
             },
-            label: function (context) {
-              var label = context.dataset.label;
-              var value = context.formattedValue;
-              if (context.datasetIndex === 2) {
-                return label + ': ' + value + ' ' + precipUnit;
-              }
-              return label + ': ' + value + ' ' + tempUnit;
+    label: function (context) {
+      var label = context.dataset.label;
+      var value = context.formattedValue;
+      var probability = data.forecast[context.dataIndex].precipitation_probability;
+      var unit = context.datasetIndex === 2 ? precipUnit : tempUnit;
+
+      if (config.forecast.precipitation_type === 'rainfall' && context.datasetIndex === 2 && config.forecast.show_probability && probability !== undefined && probability !== null) {
+        return label + ': ' + value + ' ' + precipUnit + ' / ' + Math.round(probability) + '%';
+      } else {
+        return label + ': ' + value + ' ' + unit;
+      }
             },
           },
         },
@@ -17868,11 +18695,7 @@ drawChart({ config, language, weather, forecastItems } = this) {
   });
 }
 
-updateChart({ config, language, weather, forecastItems } = this) {
-  if (!this.forecasts || !this.forecasts.length) {
-    return [];
-  }
-
+computeForecastData({ config, forecastItems } = this) {
   var forecast = this.forecasts ? this.forecasts.slice(0, forecastItems) : [];
   var roundTemp = config.forecast.round_temp == true;
   var dateTime = [];
@@ -17882,6 +18705,12 @@ updateChart({ config, language, weather, forecastItems } = this) {
 
   for (var i = 0; i < forecast.length; i++) {
     var d = forecast[i];
+    if (config.autoscroll) {
+      const cutoff = (config.forecast.type === 'hourly' ? 1 : 24) * 60 * 60 * 1000;
+      if (new Date() - new Date(d.datetime) > cutoff) {
+        continue;
+      }
+    }
     dateTime.push(d.datetime);
     tempHigh.push(d.temperature);
     if (typeof d.templow !== 'undefined') {
@@ -17894,16 +18723,35 @@ updateChart({ config, language, weather, forecastItems } = this) {
         tempLow[i] = Math.round(tempLow[i]);
       }
     }
-
-    precip.push(d.precipitation);
+    if (config.forecast.precipitation_type === 'probability') {
+      precip.push(d.precipitation_probability);
+    } else {
+      precip.push(d.precipitation);
+    }
   }
 
-  if (this.forecastChart) {
-    this.forecastChart.data.labels = dateTime;
-    this.forecastChart.data.datasets[0].data = tempHigh;
-    this.forecastChart.data.datasets[1].data = tempLow;
-    this.forecastChart.data.datasets[2].data = precip;
-    this.forecastChart.update();
+  return {
+    forecast,
+    dateTime,
+    tempHigh,
+    tempLow,
+    precip,
+  }
+}
+
+updateChart({ forecasts, forecastChart } = this) {
+  if (!forecasts || !forecasts.length) {
+    return [];
+  }
+
+  const data = this.computeForecastData();
+
+  if (forecastChart) {
+    forecastChart.data.labels = data.dateTime;
+    forecastChart.data.datasets[0].data = data.tempHigh;
+    forecastChart.data.datasets[1].data = data.tempLow;
+    forecastChart.data.datasets[2].data = data.precip;
+    forecastChart.update();
   }
 }
 
@@ -17940,7 +18788,7 @@ updateChart({ config, language, weather, forecastItems } = this) {
         .card {
           padding-top: ${config.title ? '0px' : '16px'};
           padding-right: 16px;
-          padding-bottom: 16px;
+          padding-bottom: ${config.show_last_changed === true ? '2px' : '16px'};
           padding-left: 16px;
         }
         .main {
@@ -17952,11 +18800,15 @@ updateChart({ config, language, weather, forecastItems } = this) {
         .main ha-icon {
           --mdc-icon-size: 50px;
           margin-right: 14px;
+          margin-inline-start: initial;
+          margin-inline-end: 14px;
         }
         .main img {
           width: ${config.icons_size * 2}px;
           height: ${config.icons_size * 2}px;
           margin-right: 14px;
+          margin-inline-start: initial;
+          margin-inline-end: 14px;
         }
         .main div {
           line-height: 0.9;
@@ -17970,19 +18822,21 @@ updateChart({ config, language, weather, forecastItems } = this) {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 6px;
-	  font-weight: 300;
+      	  font-weight: 300;
+          direction: ltr;
         }
         .chart-container {
           position: relative;
-          height: 180px;
+          height: ${config.forecast.chart_height}px;
           width: 100%;
+          direction: ltr;
         }
         .conditions {
           display: flex;
           justify-content: space-around;
-          align-items: centery
+          align-items: center;
           margin: 0px 5px 0px 5px;
-	  cursor: pointer;
+      	  cursor: pointer;
         }
         .forecast-item {
           display: flex;
@@ -17993,7 +18847,7 @@ updateChart({ config, language, weather, forecastItems } = this) {
         .wind-details {
           display: flex;
           justify-content: space-around;
-          align-items: centery
+          align-items: center;
           font-weight: 300;
         }
         .wind-detail {
@@ -18004,26 +18858,56 @@ updateChart({ config, language, weather, forecastItems } = this) {
         .wind-detail ha-icon {
           --mdc-icon-size: 15px;
           margin-right: 1px;
+          margin-inline-start: initial;
+          margin-inline-end: 1px;
         }
         .wind-icon {
           margin-right: 1px;
+          margin-inline-start: initial;
+          margin-inline-end: 1px;
           position: relative;
-	  bottom: 1px;
+	        bottom: 1px;
         }
         .wind-speed {
           font-size: 11px;
           margin-right: 1px;
+          margin-inline-start: initial;
+          margin-inline-end: 1px;
         }
         .wind-unit {
           font-size: 9px;
           margin-left: 1px;
+          margin-inline-start: 1px;
+          margin-inline-end: initial;
         }
         .current-time {
           position: absolute;
           top: 20px;
           right: 16px;
-          font-size: clamp(19px, 2.5vw, 26px);
+          inset-inline-start: initial;
+          inset-inline-end: 16px;
+          font-size: ${config.time_size}px;
+        }
+        .date-text {
+          font-size: ${config.day_date_size}px;
           color: var(--secondary-text-color);
+        }
+        .main .feels-like {
+          font-size: 13px;
+          margin-top: 5px;
+          font-weight: 400;
+        }
+        .main .description {
+	  font-style: italic;
+          font-size: 13px;
+          margin-top: 5px;
+          font-weight: 400;
+        }
+        .updated {
+          font-size: 13px;
+          align-items: right;
+          font-weight: 300;
+          margin-bottom: 1px;
         }
       </style>
 
@@ -18036,52 +18920,108 @@ updateChart({ config, language, weather, forecastItems } = this) {
           </div>
           ${this.renderForecastConditionIcons()}
           ${this.renderWind()}
+          ${this.renderLastUpdated()}
         </div>
       </ha-card>
     `;
   }
 
-renderMain({ config, sun, weather, temperature } = this) {
+renderMain({ config, sun, weather, temperature, feels_like, description } = this) {
   if (config.show_main === false)
     return x``;
 
-  const currentDate = new Date();
-  const currentTime = currentDate.toLocaleTimeString(this.language, { hour: 'numeric', minute: 'numeric' });
-  const currentDayOfWeek = currentDate.toLocaleString(this.language, { weekday: 'short' }).toUpperCase();
-  const currentDateFormatted = currentDate.toLocaleDateString(this.language, { month: 'short', day: 'numeric' });
+  const use12HourFormat = config.use_12hour_format;
   const showTime = config.show_time;
   const showDay = config.show_day;
   const showDate = config.show_date;
+  const showFeelsLike = config.show_feels_like;
+  const showDescription = config.show_description;
   const showCurrentCondition = config.show_current_condition !== false;
+  const showTemperature = config.show_temperature !== false;
+  const showSeconds = config.show_time_seconds === true;
 
+  let roundedTemperature = parseFloat(temperature);
+  if (!isNaN(roundedTemperature) && roundedTemperature % 1 !== 0) {
+    roundedTemperature = Math.round(roundedTemperature * 10) / 10;
+  }
+
+  let roundedFeelsLike = parseFloat(feels_like);
+  if (!isNaN(roundedFeelsLike) && roundedFeelsLike % 1 !== 0) {
+    roundedFeelsLike = Math.round(roundedFeelsLike * 10) / 10;
+  }
+
+  const iconHtml = config.animated_icons || config.icons
+    ? x`<img src="${this.getWeatherIcon(weather.state, sun.state)}" alt="">`
+    : x`<ha-icon icon="${this.getWeatherIcon(weather.state, sun.state)}"></ha-icon>`;
+
+  const updateClock = () => {
+    const currentDate = new Date();
+    const timeOptions = {
+      hour12: use12HourFormat,
+      hour: 'numeric',
+      minute: 'numeric',
+      second: showSeconds ? 'numeric' : undefined
+    };
+    const currentTime = currentDate.toLocaleTimeString(this.language, timeOptions);
+    const currentDayOfWeek = currentDate.toLocaleString(this.language, { weekday: 'long' }).toUpperCase();
+    const currentDateFormatted = currentDate.toLocaleDateString(this.language, { month: 'long', day: 'numeric' });
+
+    const mainDiv = this.shadowRoot.querySelector('.main');
+    if (mainDiv) {
+      const clockElement = mainDiv.querySelector('#digital-clock');
+      if (clockElement) {
+        clockElement.textContent = currentTime;
+      }
+      if (showDay) {
+        const dayElement = mainDiv.querySelector('.date-text.day');
+        if (dayElement) {
+          dayElement.textContent = currentDayOfWeek;
+        }
+      }
+      if (showDate) {
+        const dateElement = mainDiv.querySelector('.date-text.date');
+        if (dateElement) {
+          dateElement.textContent = currentDateFormatted;
+        }
+      }
+    }
+  };
+
+  updateClock();
+
+  if (showTime) {
+    setInterval(updateClock, 1000);
+  }
 
   return x`
     <div class="main">
-      ${config.icons ?
-        x`
-          <img
-            src="${this.getWeatherIcon(weather.state, sun.state)}"
-            alt=""
-          >
-        ` :
-        x`
-          <ha-icon icon="${this.getWeatherIcon(weather.state)}"></ha-icon>
-        `
-      }
+      ${iconHtml}
       <div>
         <div>
-          ${temperature}<span>
-          ${this.getUnit('temperature')}</span>
+          ${showTemperature ? x`${roundedTemperature}<span>${this.getUnit('temperature')}</span>` : ''}
+          ${showFeelsLike && roundedFeelsLike ? x`
+            <div class="feels-like">
+              ${this.ll('feelsLike')}
+              ${roundedFeelsLike}${this.getUnit('temperature')}
+            </div>
+          ` : ''}
+          ${showCurrentCondition ? x`
+            <div class="current-condition">
+              <span>${this.ll(weather.state)}</span>
+            </div>
+          ` : ''}
+          ${showDescription ? x`
+            <div class="description">
+              ${description}
+            </div>
+          ` : ''}
         </div>
-        ${showCurrentCondition ? x`
-          <span>${this.ll(weather.state)}</span>
-        ` : ''}
         ${showTime ? x`
           <div class="current-time">
-            ${showDay ? x`${currentDayOfWeek}` : ''}
+            <div id="digital-clock"></div>
+            ${showDay ? x`<div class="date-text day"></div>` : ''}
             ${showDay && showDate ? x` ` : ''}
-            ${showDate ? x`${currentDateFormatted}` : ''}
-            ${currentTime}
+            ${showDate ? x`<div class="date-text date"></div>` : ''}
           </div>
         ` : ''}
       </div>
@@ -18089,7 +19029,7 @@ renderMain({ config, sun, weather, temperature } = this) {
   `;
 }
 
-renderAttributes({ config, humidity, pressure, windSpeed, windDirection, sun, language, uv_index } = this) {
+renderAttributes({ config, humidity, pressure, windSpeed, windDirection, sun, language, uv_index, dew_point, wind_gust_speed, visibility } = this) {
   let dWindSpeed = windSpeed;
   let dPressure = pressure;
 
@@ -18154,61 +19094,82 @@ renderAttributes({ config, humidity, pressure, windSpeed, windDirection, sun, la
   const showWindDirection = config.show_wind_direction !== false;
   const showWindSpeed = config.show_wind_speed !== false;
   const showSun = config.show_sun !== false;
+  const showDewpoint = config.show_dew_point == true;
+  const showWindgustspeed = config.show_wind_gust_speed == true;
+  const showVisibility = config.show_visibility == true;
 
-  return x`
+return x`
     <div class="attributes">
-      ${showHumidity || showPressure ? x`
+      ${((showHumidity && humidity !== undefined) || (showPressure && dPressure !== undefined) || (showDewpoint && dew_point !== undefined) || (showVisibility && visibility !== undefined)) ? x`
         <div>
-          ${showHumidity ? x`
+          ${showHumidity && humidity !== undefined ? x`
             <ha-icon icon="hass:water-percent"></ha-icon> ${humidity} %<br>
           ` : ''}
-          ${showPressure ? x`
-            <ha-icon icon="hass:gauge"></ha-icon> ${dPressure} ${this.unitPressure}
+          ${showPressure && dPressure !== undefined ? x`
+            <ha-icon icon="hass:gauge"></ha-icon> ${dPressure} ${this.ll('units')[this.unitPressure]} <br>
+          ` : ''}
+          ${showDewpoint && dew_point !== undefined ? x`
+            <ha-icon icon="hass:thermometer-water"></ha-icon> ${dew_point} ${this.weather.attributes.temperature_unit} <br>
+          ` : ''}
+          ${showVisibility && visibility !== undefined ? x`
+            <ha-icon icon="hass:eye"></ha-icon> ${visibility} ${this.weather.attributes.visibility_unit}
           ` : ''}
         </div>
       ` : ''}
-      ${showSun || typeof uv_index !== 'undefined' ? x`
+      ${((showSun && sun !== undefined) || (typeof uv_index !== 'undefined' && uv_index !== undefined)) ? x`
         <div>
-          ${typeof uv_index !== 'undefined' ? x`
+          ${typeof uv_index !== 'undefined' && uv_index !== undefined ? x`
             <div>
               <ha-icon icon="hass:white-balance-sunny"></ha-icon> UV: ${Math.round(uv_index * 10) / 10}
             </div>
           ` : ''}
-          ${showSun ? x`
+          ${showSun && sun !== undefined ? x`
             <div>
               ${this.renderSun({ sun, language })}
             </div>
           ` : ''}
         </div>
       ` : ''}
-      ${showWindDirection || showWindSpeed ? x`
+      ${((showWindDirection && windDirection !== undefined) || (showWindSpeed && dWindSpeed !== undefined)) ? x`
         <div>
-          ${showWindDirection ? x`
-            <ha-icon icon="hass:${this.getWindDirIcon(windDirection)}"></ha-icon> ${this.getWindDir(windDirection)}<br>
+          ${showWindDirection && windDirection !== undefined ? x`
+            <ha-icon icon="hass:${this.getWindDirIcon(windDirection)}"></ha-icon> ${this.getWindDir(windDirection)} <br>
           ` : ''}
-          ${showWindSpeed ? x`
+          ${showWindSpeed && dWindSpeed !== undefined ? x`
             <ha-icon icon="hass:weather-windy"></ha-icon>
-            ${dWindSpeed} ${this.unitSpeed}
+            ${dWindSpeed} ${this.ll('units')[this.unitSpeed]} <br>
+          ` : ''}
+          ${showWindgustspeed && wind_gust_speed !== undefined ? x`
+            <ha-icon icon="hass:weather-windy-variant"></ha-icon>
+            ${wind_gust_speed} ${this.ll('units')[this.unitSpeed]}
           ` : ''}
         </div>
       ` : ''}
     </div>
-  `;
+`;
 }
 
-renderSun({ sun, language } = this) {
+renderSun({ sun, language, config } = this) {
   if (sun == undefined) {
     return x``;
   }
+
+const use12HourFormat = this.config.use_12hour_format;
+const timeOptions = {
+    hour12: use12HourFormat,
+    hour: 'numeric',
+    minute: 'numeric'
+};
+
   return x`
     <ha-icon icon="mdi:weather-sunset-up"></ha-icon>
-      ${new Date(sun.attributes.next_rising).toLocaleTimeString(language, { hour: '2-digit', minute: '2-digit' })}<br>
+      ${new Date(sun.attributes.next_rising).toLocaleTimeString(language, timeOptions)}<br>
     <ha-icon icon="mdi:weather-sunset-down"></ha-icon>
-      ${new Date(sun.attributes.next_setting).toLocaleTimeString(language, { hour: '2-digit', minute: '2-digit' })}
+      ${new Date(sun.attributes.next_setting).toLocaleTimeString(language, timeOptions)}
   `;
 }
 
-renderForecastConditionIcons({ config, forecastItems } = this) {
+renderForecastConditionIcons({ config, forecastItems, sun } = this) {
   const forecast = this.forecasts ? this.forecasts.slice(0, forecastItems) : [];
 
   if (config.forecast.condition_icons === false) {
@@ -18217,18 +19178,52 @@ renderForecastConditionIcons({ config, forecastItems } = this) {
 
   return x`
     <div class="conditions">
-      ${forecast.map((item) => x`
-        <div class="forecast-item">
-          ${config.icons ?
-            x`
-              <img class="icon" src="${this.getWeatherIcon(item.condition, item.sun)}" alt="">
-            ` :
-            x`
-              <ha-icon icon="${this.getWeatherIcon(item.condition, item.sun)}"></ha-icon>
-            `
-          }
-        </div>
-      `)}
+      ${forecast.map((item) => {
+        const forecastTime = new Date(item.datetime);
+        const sunriseTime = new Date(sun.attributes.next_rising);
+        const sunsetTime = new Date(sun.attributes.next_setting);
+
+        // Adjust sunrise and sunset times to match the date of forecastTime
+        const adjustedSunriseTime = new Date(forecastTime);
+        adjustedSunriseTime.setHours(sunriseTime.getHours());
+        adjustedSunriseTime.setMinutes(sunriseTime.getMinutes());
+        adjustedSunriseTime.setSeconds(sunriseTime.getSeconds());
+
+        const adjustedSunsetTime = new Date(forecastTime);
+        adjustedSunsetTime.setHours(sunsetTime.getHours());
+        adjustedSunsetTime.setMinutes(sunsetTime.getMinutes());
+        adjustedSunsetTime.setSeconds(sunsetTime.getSeconds());
+
+        let isDayTime;
+
+        if (config.forecast.type === 'daily') {
+          // For daily forecast, assume it's day time
+          isDayTime = true;
+        } else {
+          // For other forecast types, determine based on sunrise and sunset times
+          isDayTime = forecastTime >= adjustedSunriseTime && forecastTime <= adjustedSunsetTime;
+        }
+
+        const weatherIcons = isDayTime ? weatherIconsDay : weatherIconsNight;
+        const condition = item.condition;
+
+        let iconHtml;
+
+        if (config.animated_icons || config.icons) {
+          const iconSrc = config.animated_icons ?
+            `${this.baseIconPath}${weatherIcons[condition]}.svg` :
+            `${this.config.icons}${weatherIcons[condition]}.svg`;
+          iconHtml = x`<img class="icon" src="${iconSrc}" alt="">`;
+        } else {
+          iconHtml = x`<ha-icon icon="${this.getWeatherIcon(condition, sun.state)}"></ha-icon>`;
+        }
+
+        return x`
+          <div class="forecast-item">
+            ${iconHtml}
+          </div>
+        `;
+      })}
     </div>
   `;
 }
@@ -18278,11 +19273,47 @@ renderWind({ config, weather, windSpeed, windDirection, forecastItems } = this) 
             <div class="wind-detail">
               <ha-icon class="wind-icon" icon="hass:${this.getWindDirIcon(item.wind_bearing)}"></ha-icon>
               <span class="wind-speed">${dWindSpeed}</span>
-              <span class="wind-unit">${this.unitSpeed}</span>
+              <span class="wind-unit">${this.ll('units')[this.unitSpeed]}</span>
             </div>
           `;
         })}
       ` : ''}
+    </div>
+  `;
+}
+
+renderLastUpdated() {
+  const lastUpdatedString = this.weather.last_changed;
+  const lastUpdatedTimestamp = new Date(lastUpdatedString).getTime();
+  const currentTimestamp = Date.now();
+  const timeDifference = currentTimestamp - lastUpdatedTimestamp;
+
+  const minutesAgo = Math.floor(timeDifference / (1000 * 60));
+  const hoursAgo = Math.floor(minutesAgo / 60);
+
+  const locale = this.language;
+
+  const formatter = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' });
+
+  let formattedLastUpdated;
+
+  if (hoursAgo > 0) {
+    formattedLastUpdated = formatter.format(-hoursAgo, 'hour');
+  } else {
+    formattedLastUpdated = formatter.format(-minutesAgo, 'minute');
+  }
+
+  const showLastUpdated = this.config.show_last_changed == true;
+
+  if (!showLastUpdated) {
+    return x``;
+  }
+
+  return x`
+    <div class="updated">
+      <div>
+        ${formattedLastUpdated}
+      </div>
     </div>
   `;
 }

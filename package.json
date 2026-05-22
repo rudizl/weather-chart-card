@@ -15,23 +15,22 @@
   "author": "Marc Lamberts",
   "license": "MIT",
   "dependencies": {
-    "@polymer/paper-checkbox": "^3.1.0",
-    "chart.js": "^4.3.3",
+    "chart.js": "^4.4.1",
     "chartjs-plugin-datalabels": "^2.2.0",
-    "lit": "^2.8.0"
+    "lit": "^2.8.0",
+    "relative-time": "^1.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.0",
-    "acorn": "^8.10.0",
-    "eslint": "^8.47.0",
-    "rollup": "^3.28.0",
+    "eslint": "^8.56.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-serve": "^2.0.2"
+    "rollup-plugin-serve": "^2.0.3"
   },
   "scripts": {
     "start": "rollup -c rollup.config.dev.js --watch",
     "build": "npm run lint && npm run rollup",
-    "lint": "eslint src/* --ext .js",
+    "lint": "eslint 'src/**/*.js'",
     "rollup": "rollup -c"
   }
 }

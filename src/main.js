@@ -721,7 +721,7 @@ updateChart({ config, language, weather, forecastItems } = this) {
         }
       </style>
 
-      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: pointer;">
+      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: ${(config.tap_action || {}).action === 'none' ? 'default' : 'pointer'};">
         <div class="card">
           ${this.renderMain()}
           ${this.renderAttributes()}
@@ -985,6 +985,7 @@ renderWind({ config, weather, windSpeed, windDirection, forecastItems } = this) 
     const tapAction = this.config.tap_action || { action: 'more-info' };
     switch (tapAction.action) {
       case 'navigate':
+        if (!tapAction.navigation_path) return;
         history.pushState(null, '', tapAction.navigation_path);
         window.dispatchEvent(new Event('location-changed'));
         break;

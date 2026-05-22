@@ -669,6 +669,17 @@ class ContentCardEditor extends s {
     this.requestUpdate();
   }
 
+  _handleTapActionChange(event) {
+    if (!this._config) {
+      return;
+    }
+    const newConfig = JSON.parse(JSON.stringify(this._config));
+    if (!newConfig.tap_action) newConfig.tap_action = {};
+    newConfig.tap_action.action = event.target.value;
+    this.configChanged(newConfig);
+    this.requestUpdate();
+  }
+
   showPage(pageName) {
     this.currentPage = pageName;
     this.requestUpdate();
@@ -924,25 +935,25 @@ class ContentCardEditor extends s {
             <label>
               <input type="radio" name="tap_action" value="more-info"
                 ?checked="${(this._config.tap_action || {}).action === 'more-info' || !this._config.tap_action}"
-                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+                @change="${this._handleTapActionChange}">
               More info
             </label><br>
             <label>
               <input type="radio" name="tap_action" value="navigate"
                 ?checked="${(this._config.tap_action || {}).action === 'navigate'}"
-                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+                @change="${this._handleTapActionChange}">
               Navigate
             </label><br>
             <label>
               <input type="radio" name="tap_action" value="url"
                 ?checked="${(this._config.tap_action || {}).action === 'url'}"
-                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+                @change="${this._handleTapActionChange}">
               URL
             </label><br>
             <label>
               <input type="radio" name="tap_action" value="none"
                 ?checked="${(this._config.tap_action || {}).action === 'none'}"
-                @change="${(e) => this._valueChanged(e, 'tap_action.action')}">
+                @change="${this._handleTapActionChange}">
               None
             </label>
           </div>
@@ -18016,7 +18027,7 @@ updateChart({ config, language, weather, forecastItems } = this) {
         }
       </style>
 
-      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: pointer;">
+      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: ${(config.tap_action || {}).action === 'none' ? 'default' : 'pointer'};">
         <div class="card">
           ${this.renderMain()}
           ${this.renderAttributes()}
@@ -18280,6 +18291,7 @@ renderWind({ config, weather, windSpeed, windDirection, forecastItems } = this) 
     const tapAction = this.config.tap_action || { action: 'more-info' };
     switch (tapAction.action) {
       case 'navigate':
+        if (!tapAction.navigation_path) return;
         history.pushState(null, '', tapAction.navigation_path);
         window.dispatchEvent(new Event('location-changed'));
         break;

@@ -1,7 +1,11 @@
 <h1 align="center">Weather Chart Card</h1>
 
-# No Longer Maintained
-This repository is no longer maintained. Feel free to fork it if you find it useful.
+> **This is a maintained fork of [mlamberts78/weather-chart-card](https://github.com/mlamberts78/weather-chart-card).**
+> The upstream repository is no longer maintained. This fork adds new features on top of the last upstream release (V2.4.11).
+>
+> **Added in this fork:**
+> - `tap_action`, `hold_action`, `double_tap_action` — full Home Assistant action support (navigate, more-info, url, call-service, etc.)
+
 
 [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mlamberts7I)
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=HZUUW64FRM2J2)
@@ -73,6 +77,74 @@ HACS is a third party community store and is not included in Home Assistant out 
 | units                 | object  | none                     | See [units of measurement](#units-of-measurement) for available options.                           |
 | locale                | string  | none                     | See [Supported languages](#Supported-languages) for available languages                            |
 | autoscroll            | boolean | false                    | Update the chart each hour, hiding prior forecast datapoints                                       |
+| tap_action            | object  | `action: more-info`      | Action on single tap. See [action options](#action-options).                                       |
+| hold_action           | object  | `action: more-info`      | Action on long press (500 ms). See [action options](#action-options).                              |
+| double_tap_action     | object  | `action: none`           | Action on double tap. See [action options](#action-options).                                       |
+
+##### Action options
+
+Supports the standard Home Assistant action format.
+
+| Name              | Type   | Default      | Description                                                                 |
+| ----------------- | ------ | ------------ | --------------------------------------------------------------------------- |
+| action            | string | `more-info`  | One of `more-info`, `navigate`, `url`, `toggle`, `call-service`, `perform-action`, `fire-dom-event`, `none`. |
+| navigation_path   | string | none         | Path to navigate to. Required when `action: navigate`.                      |
+| url_path          | string | none         | URL to open. Required when `action: url`.                                   |
+| url_path_target   | string | `_blank`     | Browser target for URL. E.g. `_blank`, `_self`.                             |
+| service           | string | none         | Service to call, e.g. `light.turn_on`. Required when `action: call-service`.|
+| service_data      | object | none         | Data to pass to the service call.                                           |
+
+**Examples:**
+
+Navigate to a specific dashboard tab on tap:
+```yaml
+type: custom:weather-chart-card
+entity: weather.home
+tap_action:
+  action: navigate
+  navigation_path: /lovelace/weather
+```
+
+Navigate on tap, show more-info on hold:
+```yaml
+type: custom:weather-chart-card
+entity: weather.home
+tap_action:
+  action: navigate
+  navigation_path: /lovelace/weather
+hold_action:
+  action: more-info
+double_tap_action:
+  action: none
+```
+
+Call a service on tap:
+```yaml
+type: custom:weather-chart-card
+entity: weather.home
+tap_action:
+  action: call-service
+  service: notify.mobile_app
+  service_data:
+    message: "Current weather: {{ states('weather.home') }}"
+```
+
+Open a URL on tap:
+```yaml
+type: custom:weather-chart-card
+entity: weather.home
+tap_action:
+  action: url
+  url_path: https://www.yr.no
+```
+
+Disable all actions:
+```yaml
+type: custom:weather-chart-card
+entity: weather.home
+tap_action:
+  action: none
+```
 
 ##### Forecast options
 

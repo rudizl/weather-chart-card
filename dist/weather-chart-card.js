@@ -18332,6 +18332,11 @@ async firstUpdated(changedProperties) {
   if (this.config.autoscroll) {
     this.autoscroll();
   }
+
+  const canvas = this.renderRoot.querySelector('#forecastChart');
+  if (canvas) {
+    canvas.addEventListener('click', () => this._handleAction());
+  }
 }
 
 
@@ -19324,7 +19329,7 @@ renderLastUpdated() {
       case 'navigate':
         if (!tapAction.navigation_path) return;
         history.pushState(null, '', tapAction.navigation_path);
-        window.dispatchEvent(new Event('location-changed'));
+        window.dispatchEvent(new Event('location-changed', { bubbles: true, composed: true }));
         break;
       case 'url':
         window.open(tapAction.url_path, '_blank');

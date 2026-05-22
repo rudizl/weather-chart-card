@@ -18156,6 +18156,8 @@ subscribeForecastEvents() {
     if (!this.resizeInitialized) {
       this.delayedAttachResizeObserver();
     }
+    this._boundHandleAction = () => this._handleAction();
+    this.addEventListener('click', this._boundHandleAction);
   }
 
   delayedAttachResizeObserver() {
@@ -18170,6 +18172,9 @@ subscribeForecastEvents() {
     this.detachResizeObserver();
     if (this.forecastSubscriber) {
       this.forecastSubscriber.then((unsub) => unsub());
+    }
+    if (this._boundHandleAction) {
+      this.removeEventListener('click', this._boundHandleAction);
     }
   }
 
@@ -18916,7 +18921,7 @@ updateChart({ forecasts, forecastChart } = this) {
         }
       </style>
 
-      <ha-card header="${config.title}" @click="${() => this._handleAction()}" style="cursor: ${(config.tap_action || {}).action === 'none' ? 'default' : 'pointer'};">
+      <ha-card header="${config.title}" style="cursor: ${(config.tap_action || {}).action === 'none' ? 'default' : 'pointer'};">
         <div class="card">
           ${this.renderMain()}
           ${this.renderAttributes()}

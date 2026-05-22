@@ -18045,6 +18045,8 @@ setConfig(config) {
     show_last_changed: false,
     show_description: false,
     tap_action: { action: 'more-info' },
+    hold_action: { action: 'more-info' },
+    double_tap_action: { action: 'none' },
     ...config,
     forecast: {
       precipitation_type: 'rainfall',
@@ -18156,8 +18158,7 @@ subscribeForecastEvents() {
     if (!this.resizeInitialized) {
       this.delayedAttachResizeObserver();
     }
-    this._boundHandleAction = () => this._handleAction();
-    this.addEventListener('click', this._boundHandleAction);
+    this._setupActionHandler();
   }
 
   delayedAttachResizeObserver() {
@@ -18173,9 +18174,7 @@ subscribeForecastEvents() {
     if (this.forecastSubscriber) {
       this.forecastSubscriber.then((unsub) => unsub());
     }
-    if (this._boundHandleAction) {
-      this.removeEventListener('click', this._boundHandleAction);
-    }
+    this._teardownActionHandler();
   }
 
   attachResizeObserver() {
@@ -18336,11 +18335,6 @@ async firstUpdated(changedProperties) {
 
   if (this.config.autoscroll) {
     this.autoscroll();
-  }
-
-  const canvas = this.renderRoot.querySelector('#forecastChart');
-  if (canvas) {
-    canvas.addEventListener('click', () => this._handleAction());
   }
 }
 
@@ -18921,7 +18915,7 @@ updateChart({ forecasts, forecastChart } = this) {
         }
       </style>
 
-      <ha-card header="${config.title}" style="cursor: ${(config.tap_action || {}).action === 'none' ? 'default' : 'pointer'};">
+      <ha-card header="${config.title}" style="cursor: ${[config.tap_action, config.hold_action, config.double_tap_action].every(a => !a || a.action === 'none') ? 'default' : 'pointer'};">
         <div class="card">
           ${this.renderMain()}
           ${this.renderAttributes()}
@@ -19328,22 +19322,106 @@ renderLastUpdated() {
   `;
 }
 
-  _handleAction() {
-    const tapAction = this.config.tap_action || { action: 'more-info' };
-    switch (tapAction.action) {
+  // ── HA-standard action handler ────────────────────────────────────────────
+
+  _setupActionHandler() {
+    this._holdTimer   = null;
+    this._tapTimer    = null;
+    this._tapCount    = 0;
+    this._holdFired   = false;
+    this._startX      = 0;
+    this._startY      = 0;
+
+    this._onPointerDown  = this._onPointerDown.bind(this);
+    this._onPointerUp    = this._onPointerUp.bind(this);
+    this._onPointerCancel = this._onPointerCancel.bind(this);
+
+    this.addEventListener('pointerdown',  this._onPointerDown);
+    this.addEventListener('pointerup',    this._onPointerUp);
+    this.addEventListener('pointercancel', this._onPointerCancel);
+  }
+
+  _teardownActionHandler() {
+    clearTimeout(this._holdTimer);
+    clearTimeout(this._tapTimer);
+    this.removeEventListener('pointerdown',   this._onPointerDown);
+    this.removeEventListener('pointerup',     this._onPointerUp);
+    this.removeEventListener('pointercancel', this._onPointerCancel);
+  }
+
+  _onPointerDown(e) {
+    this._startX    = e.clientX;
+    this._startY    = e.clientY;
+    this._holdFired = false;
+    clearTimeout(this._holdTimer);
+    this._holdTimer = setTimeout(() => {
+      this._holdFired = true;
+      this._executeAction('hold_action');
+    }, 500);
+  }
+
+  _onPointerUp(e) {
+    clearTimeout(this._holdTimer);
+
+    // Ignore if pointer moved significantly (scroll)
+    const dx = Math.abs(e.clientX - this._startX);
+    const dy = Math.abs(e.clientY - this._startY);
+    if (dx > 10 || dy > 10) return;
+
+    if (this._holdFired) return;
+
+    this._tapCount++;
+    if (this._tapCount === 1) {
+      this._tapTimer = setTimeout(() => {
+        this._tapCount = 0;
+        this._executeAction('tap_action');
+      }, 250);
+    } else if (this._tapCount >= 2) {
+      clearTimeout(this._tapTimer);
+      this._tapCount = 0;
+      this._executeAction('double_tap_action');
+    }
+  }
+
+  _onPointerCancel() {
+    clearTimeout(this._holdTimer);
+    clearTimeout(this._tapTimer);
+    this._tapCount  = 0;
+    this._holdFired = false;
+  }
+
+  _executeAction(actionType) {
+    const actionConfig = this.config[actionType] || { action: 'none' };
+    switch (actionConfig.action) {
       case 'navigate':
-        if (!tapAction.navigation_path) return;
-        history.pushState(null, '', tapAction.navigation_path);
+        if (!actionConfig.navigation_path) return;
+        history.pushState(null, '', actionConfig.navigation_path);
         window.dispatchEvent(new Event('location-changed', { bubbles: true, composed: true }));
         break;
       case 'url':
-        window.open(tapAction.url_path, '_blank');
+        if (actionConfig.url_path)
+          window.open(actionConfig.url_path, actionConfig.url_path_target || '_blank');
         break;
-      case 'none':
+      case 'toggle':
+        if (this.config.entity)
+          this._hass.callService('homeassistant', 'toggle', { entity_id: this.config.entity });
         break;
+      case 'call-service':
+      case 'perform-action': {
+        const svc = actionConfig.service || actionConfig.perform_action || '';
+        const [domain, service] = svc.split('.');
+        if (domain && service)
+          this._hass.callService(domain, service, actionConfig.service_data || actionConfig.data || {});
+        break;
+      }
+      case 'fire-dom-event': {
+        const ev = new Event('ll-custom', { bubbles: true, composed: true });
+        ev.detail = actionConfig;
+        this.dispatchEvent(ev);
+        break;
+      }
       case 'more-info':
-      default:
-        this.showMoreInfo(this.config.entity);
+        this.showMoreInfo(actionConfig.entity || this.config.entity);
         break;
     }
   }

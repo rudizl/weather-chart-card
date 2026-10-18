@@ -1,6 +1,6 @@
 <h1 align="center">Weather Chart Card</h1>
 
-> **This is a maintained fork of [mlamberts78/weather-chart-card](https://github.com/mlamberts78/weather-chart-card).**
+> **This is a fork of [mlamberts78/weather-chart-card](https://github.com/mlamberts78/weather-chart-card).**
 > The upstream repository is no longer maintained. This fork adds new features on top of the last upstream release (V2.4.11).
 >
 > **Added in this fork:**
